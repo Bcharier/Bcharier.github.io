@@ -15,7 +15,7 @@
 
 @font-face {
   font-family: "anurati";
-  src: url(/Font/Anurati-Regular.otf);
+  src: url(/Font/Anurati-Regular.otf) format("opentype");
 }
 
 @-webkit-keyframes socials-flash {
@@ -357,6 +357,20 @@ html {
 
 html a {
   text-decoration: none;
+}
+
+h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #00b8ff;
+  margin-top: 15rem;
 }
 
 #switch-container {

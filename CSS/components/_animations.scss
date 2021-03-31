@@ -6,8 +6,6 @@
   45% {
     color: $colour-background;
     background-color: $colour-secondary;
-    font-size: 3rem;
-    margin: 1rem;
     text-shadow: none;
     background-clip: text;
     -webkit-background-clip: text;
@@ -17,8 +15,6 @@
   28% {
     color: $colour-background;
     background-color: $colour-secondary;
-    font-size: 3rem;
-    margin: 1rem;
     text-shadow: none;
     background-clip: text;
     -webkit-background-clip: text;
@@ -50,12 +46,14 @@
   animation: socials-flash 2800ms 2800ms forwards;
 }
 
+.socials-appear-delay2 {
+  animation: socials-flash 2100ms 2100ms forwards;
+}
+
 // Clignotement du nom
 @keyframes title-flash {
   0%,
   12%,
-  16%,
-  24%,
   38%,
   100% {
     color: $colour-secondary;
@@ -64,8 +62,6 @@
   }
 
   10%,
-  13%,
-  21%,
   34%,
   70% {
     color: $colour-background;
@@ -79,11 +75,11 @@
 }
 
 .name-appear-delay0 {
-  animation: title-flash 3500ms 300ms forwards;
+  animation: title-flash 2500ms 300ms forwards;
 }
 
 .name-appear-delay1 {
-  animation: title-flash 3700ms 700ms forwards;
+  animation: title-flash 2700ms 700ms forwards;
 }
 
 @keyframes small-title-appear {
@@ -98,7 +94,7 @@
 }
 
 .small-title-appear {
-  animation: small-title-appear 800ms 4500ms forwards;
+  animation: small-title-appear 800ms 3500ms forwards;
 }
 
 // Apparition des éléments
@@ -113,11 +109,11 @@
 }
 
 .item-appear-delay0 {
-  animation: item-appear 800ms 4500ms forwards;
+  animation: item-appear 800ms 3500ms forwards;
 }
 
 .item-appear-delay1 {
-  animation: item-appear 700ms 5000ms forwards;
+  animation: item-appear 700ms 4000ms forwards;
 }
 
 // Animation flèches pour scroll
@@ -138,7 +134,7 @@
 }
 
 .scroll-appear {
-  animation: scroll-flash 3500ms 7000ms infinite;
+  animation: scroll-flash 3500ms 6000ms infinite;
 }
 
 .scroll-appear-again {

@@ -23,8 +23,6 @@
   45% {
     color: #060E1A;
     background-color: #00b8ff;
-    font-size: 3rem;
-    margin: 1rem;
     text-shadow: none;
     background-clip: text;
     -webkit-background-clip: text;
@@ -33,8 +31,6 @@
   28% {
     color: #060E1A;
     background-color: #00b8ff;
-    font-size: 3rem;
-    margin: 1rem;
     text-shadow: none;
     background-clip: text;
     -webkit-background-clip: text;
@@ -61,8 +57,6 @@
   45% {
     color: #060E1A;
     background-color: #00b8ff;
-    font-size: 3rem;
-    margin: 1rem;
     text-shadow: none;
     background-clip: text;
     -webkit-background-clip: text;
@@ -71,8 +65,6 @@
   28% {
     color: #060E1A;
     background-color: #00b8ff;
-    font-size: 3rem;
-    margin: 1rem;
     text-shadow: none;
     background-clip: text;
     -webkit-background-clip: text;
@@ -104,11 +96,14 @@
           animation: socials-flash 2800ms 2800ms forwards;
 }
 
+.socials-appear-delay2 {
+  -webkit-animation: socials-flash 2100ms 2100ms forwards;
+          animation: socials-flash 2100ms 2100ms forwards;
+}
+
 @-webkit-keyframes title-flash {
   0%,
   12%,
-  16%,
-  24%,
   38%,
   100% {
     color: #00b8ff;
@@ -116,8 +111,6 @@
     opacity: 1;
   }
   10%,
-  13%,
-  21%,
   34%,
   70% {
     color: #060E1A;
@@ -132,8 +125,6 @@
 @keyframes title-flash {
   0%,
   12%,
-  16%,
-  24%,
   38%,
   100% {
     color: #00b8ff;
@@ -141,8 +132,6 @@
     opacity: 1;
   }
   10%,
-  13%,
-  21%,
   34%,
   70% {
     color: #060E1A;
@@ -155,13 +144,13 @@
 }
 
 .name-appear-delay0 {
-  -webkit-animation: title-flash 3500ms 300ms forwards;
-          animation: title-flash 3500ms 300ms forwards;
+  -webkit-animation: title-flash 2500ms 300ms forwards;
+          animation: title-flash 2500ms 300ms forwards;
 }
 
 .name-appear-delay1 {
-  -webkit-animation: title-flash 3700ms 700ms forwards;
-          animation: title-flash 3700ms 700ms forwards;
+  -webkit-animation: title-flash 2700ms 700ms forwards;
+          animation: title-flash 2700ms 700ms forwards;
 }
 
 @-webkit-keyframes small-title-appear {
@@ -185,8 +174,8 @@
 }
 
 .small-title-appear {
-  -webkit-animation: small-title-appear 800ms 4500ms forwards;
-          animation: small-title-appear 800ms 4500ms forwards;
+  -webkit-animation: small-title-appear 800ms 3500ms forwards;
+          animation: small-title-appear 800ms 3500ms forwards;
 }
 
 @-webkit-keyframes item-appear {
@@ -208,13 +197,13 @@
 }
 
 .item-appear-delay0 {
-  -webkit-animation: item-appear 800ms 4500ms forwards;
-          animation: item-appear 800ms 4500ms forwards;
+  -webkit-animation: item-appear 800ms 3500ms forwards;
+          animation: item-appear 800ms 3500ms forwards;
 }
 
 .item-appear-delay1 {
-  -webkit-animation: item-appear 700ms 5000ms forwards;
-          animation: item-appear 700ms 5000ms forwards;
+  -webkit-animation: item-appear 700ms 4000ms forwards;
+          animation: item-appear 700ms 4000ms forwards;
 }
 
 @-webkit-keyframes scroll-flash {
@@ -246,8 +235,8 @@
 }
 
 .scroll-appear {
-  -webkit-animation: scroll-flash 3500ms 7000ms infinite;
-          animation: scroll-flash 3500ms 7000ms infinite;
+  -webkit-animation: scroll-flash 3500ms 6000ms infinite;
+          animation: scroll-flash 3500ms 6000ms infinite;
 }
 
 .scroll-appear-again {
@@ -498,10 +487,19 @@ header nav ul li:hover {
   margin: 1rem;
 }
 
+#page-title i:hover {
+  background: #00b8ff;
+  background: linear-gradient(162deg, #00b8ff 0%, #d600ff 69%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 #page-title #front-end {
   color: #00b8ff;
   font-size: 2rem;
   opacity: 0;
+  width: 100%;
 }
 
 #job-description {
@@ -551,7 +549,7 @@ header nav ul li:hover {
 }
 
 #about {
-  margin: 15rem 5% 5rem 5%;
+  margin: 18rem 5% 5rem 5%;
   color: #AE00ED;
   padding-top: 5rem;
 }
@@ -641,8 +639,14 @@ header nav ul li:hover {
   color: #060E1A;
   font-size: 3rem;
   text-shadow: 0 0 6px rgba(202, 228, 225, 0.92), 0 0 30px rgba(202, 228, 225, 0.34), 0 0 12px rgba(30, 132, 242, 0.52), 0 0 21px rgba(30, 132, 242, 0.92), 0 0 34px rgba(30, 132, 242, 0.78), 0 0 54px rgba(30, 132, 242, 0.92);
+}
+
+#project-presentation .project .project-header .project-github-link:hover {
+  background: #00b8ff;
+  background: linear-gradient(162deg, #00b8ff 0%, #d600ff 69%);
   background-clip: text;
   -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 #project-presentation .project .project-header h3 {
@@ -706,6 +710,7 @@ header nav ul li:hover {
 #project-presentation .project .text-project {
   margin-left: 2rem;
   font-size: 1.2rem;
+  max-width: 50rem;
 }
 
 footer {
@@ -758,34 +763,171 @@ footer #contact-info p:hover {
   text-shadow: 0 0 6px rgba(202, 228, 225, 0.92), 0 0 30px rgba(202, 228, 225, 0.34), 0 0 12px rgba(30, 132, 242, 0.52), 0 0 21px rgba(30, 132, 242, 0.92), 0 0 34px rgba(30, 132, 242, 0.78), 0 0 54px rgba(30, 132, 242, 0.92);
 }
 
-@media only screen and (max-width: 430px) {
-  body {
-    width: 50%;
-    overflow: hidden;
-  }
-  #switch-container {
-    display: none;
-  }
+@media only screen and (max-width: 431px) {
   header {
     padding: 0;
   }
-  header #lang-choice {
-    display: none;
-  }
-  header nav {
-    width: 100%;
-  }
   header nav ul {
     margin: 0;
+    padding: 0;
   }
   header nav ul li {
-    border: solid red;
-    font-size: 0.9rem;
-    margin: 0 3%;
+    font-size: 0.8rem;
+    margin: 0 1rem;
   }
-  header nav ul li a {
-    display: inline-block;
-    width: 6rem;
+  #page-title {
+    margin: 1.5rem 5%;
+  }
+  #page-title #name {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 1.5rem auto;
+  }
+  #page-title #name h1 {
+    font-size: 1.8rem;
+    margin-right: 1rem;
+  }
+  #page-title .social-links {
+    margin: 2rem auto;
+  }
+  #page-title i {
+    font-size: 2.2rem;
+    margin: 0 1.5rem;
+  }
+  #page-title #front-end {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 1.2rem;
+    margin: 1.5rem auto;
+    width: 100%;
+  }
+  #job-description {
+    font-size: 1.2rem;
+  }
+  #description p {
+    font-size: 1.1rem;
+    padding: 0;
+  }
+  #arrow-scroll {
+    position: fixed;
+    right: 0.3rem;
+    bottom: 2rem;
+    font-size: 3rem;
+    background: #00b8ff;
+    background: linear-gradient(162deg, #00b8ff 0%, #d600ff 69%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  #about {
+    margin: 5rem auto;
+  }
+  #about #about-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 1.8rem;
+    width: auto;
+    margin: 0 auto 3rem auto;
+  }
+  #about #about-description {
+    font-size: 1.1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: wrap;
+        flex-flow: wrap;
+  }
+  #about img {
+    margin: auto;
+  }
+  .separation {
+    margin: 3rem auto 3rem auto;
+  }
+  #project-presentation {
+    margin: 5rem auto 1.5rem auto;
+  }
+  #project-presentation h2 {
+    font-size: 1.8rem;
+    margin: auto;
+  }
+  #project-presentation .project {
+    margin: auto;
+  }
+  #project-presentation .project .project-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: wrap;
+        flex-flow: wrap;
+    width: auto;
+    margin: auto;
+  }
+  #project-presentation .project .description-project {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: wrap;
+        flex-flow: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #project-presentation .project .description-project img {
+    width: 20rem;
+    margin-top: 2rem;
+  }
+  #project-presentation .project .icon-project {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin: 1.5rem auto;
+    width: 100%;
+  }
+  #project-presentation .project .text-project {
+    font-size: 1.1rem;
+  }
+  footer {
+    margin: 0 auto 5rem auto;
+    padding: 0;
+  }
+  footer h2 {
+    font-size: 1.8rem;
+    margin: 0 auto 2rem auto;
+  }
+  footer #contact-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  footer #contact-info p {
+    font-size: 1.4rem;
+    margin: 0 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 1441px) {
+  body,
+  html {
+    margin: auto;
+    max-width: 85%;
   }
 }
 /*# sourceMappingURL=style.css.map */

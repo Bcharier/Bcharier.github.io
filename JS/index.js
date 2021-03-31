@@ -118,7 +118,7 @@ const lightsOn = () => {
   description.classList.add("item-appear-delay1");
   githubLink.classList.add("socials-appear-delay0");
   linkedinLink.classList.add("socials-appear-delay1");
-  emailLink.classList.add("socials-appear-delay0");
+  emailLink.classList.add("socials-appear-delay2");
   arrowScroll.classList.add("scroll-appear");
   buttonLang.classList.add("item-appear-delay0");
   nav.classList.add("item-appear-delay0");

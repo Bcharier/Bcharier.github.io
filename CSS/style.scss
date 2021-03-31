@@ -97,8 +97,6 @@ header {
   #name {
     display: flex;
     color: $colour-secondary;
-    // font-family: "anurati";
-    // @include neon-text-shadow
 
     h1 {
       margin: 0 3rem 0 0;
@@ -118,10 +116,15 @@ header {
     margin: 1rem;
   }
 
+  i:hover {
+    @include neon-arrow-scroll;
+  }
+
   #front-end {
     color: $colour-secondary;
     font-size: 2rem;
     opacity: 0;
+    width: 100%;
   }
 }
 
@@ -165,7 +168,7 @@ header {
 // A propos de moi
 
 #about {
-  margin: 15rem 5% 5rem 5%;
+  margin: 18rem 5% 5rem 5%;
   color: $colour-primary;
   padding-top: 5rem;
 
@@ -218,8 +221,6 @@ header {
     display: flex;
     flex-flow: column;
     color: $colour-secondary;
-    // border: solid 0.2rem $colour-secondary;
-    // @include neon-box-shadow-primary;
     margin: 3rem auto;
 
     .project-header {
@@ -233,8 +234,10 @@ header {
         color: $colour-background;
         font-size: 3rem;
         @include neon-text-shadow;
-        background-clip: text;
-        -webkit-background-clip: text;
+      }
+
+      .project-github-link:hover {
+        @include neon-arrow-scroll;
       }
 
       h3 {
@@ -245,7 +248,6 @@ header {
     .description-project {
       display: flex;
       width: 100%;
-      // font-family: "neuropolX";
     }
 
     .description-project img {
@@ -290,6 +292,7 @@ header {
     .text-project {
       margin-left: 2rem;
       font-size: 1.2rem;
+      max-width: 50rem;
     }
   }
 }

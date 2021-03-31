@@ -389,6 +389,7 @@ header {
   z-index: 3;
   height: 5rem;
   margin: 0 5%;
+  font-family: "quasith";
 }
 
 header #lang-choice {
@@ -399,7 +400,6 @@ header #lang-choice {
   -webkit-box-direction: normal;
       -ms-flex-flow: row;
           flex-flow: row;
-  font-family: "anurati";
   opacity: 0;
 }
 
@@ -416,7 +416,6 @@ header #lang-choice .lang-option:hover {
 
 header nav {
   opacity: 0;
-  font-family: "anurati";
 }
 
 header nav ul {

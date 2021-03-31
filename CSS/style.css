@@ -353,6 +353,7 @@ html {
   background-color: #060E1A;
   font-family: "neuropolitical";
   scroll-behavior: smooth;
+  margin: 0;
 }
 
 html a {
@@ -373,45 +374,14 @@ h1 {
   margin-top: 15rem;
 }
 
-#switch-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  top: 3rem;
-  left: 50%;
-  z-index: 5;
-}
-
-#switch-container .switch {
-  position: absolute;
-  left: 50%;
-  color: #AE00ED;
-  cursor: pointer;
-  font-size: 3rem;
-}
-
-#switch-container #switch-on {
-  border: none;
-  background: none;
-}
-
-#switch-container #switch-off {
-  border: none;
-  background: none;
-  opacity: 1;
-}
-
 .sticky {
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
   top: 0;
-  width: 77.5%;
-  padding-top: 0.5rem;
+  left: 0;
   height: 5rem;
-}
-
-.sticky-padding {
-  padding-top: 15rem;
+  width: 100%;
+  margin: 0;
 }
 
 header {
@@ -426,11 +396,10 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 0 0 10rem 0;
   background-color: #060E1A;
   z-index: 3;
   height: 5rem;
-  padding: 0 11%;
+  margin: 0 5%;
 }
 
 header #lang-choice {
@@ -442,7 +411,7 @@ header #lang-choice {
       -ms-flex-flow: row;
           flex-flow: row;
   font-family: "anurati";
-  opacity: 1;
+  opacity: 0;
 }
 
 header #lang-choice .lang-option {
@@ -457,7 +426,7 @@ header #lang-choice .lang-option:hover {
 }
 
 header nav {
-  opacity: 1;
+  opacity: 0;
   font-family: "anurati";
 }
 
@@ -488,40 +457,33 @@ header nav ul li:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  margin: 0 5%;
+  margin: 5rem 5%;
 }
 
 #page-title #name {
-  position: relative;
-  bottom: 10rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   color: #00b8ff;
-  margin-top: 0;
-  width: 80%;
-}
-
-#page-title #name #name-delay0 {
-  opacity: 1;
-}
-
-#page-title #name #name-delay1 {
-  opacity: 1;
 }
 
 #page-title #name h1 {
-  margin-right: 3rem;
-  font-size: 5rem;
+  margin: 0 3rem 0 0;
+  font-size: 3rem;
+  opacity: 0;
 }
 
 #page-title .social-links {
-  position: relative;
-  bottom: 10rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -539,8 +501,7 @@ header nav ul li:hover {
 #page-title #front-end {
   color: #00b8ff;
   font-size: 2rem;
-  position: relative;
-  bottom: 13rem;
+  opacity: 0;
 }
 
 #job-description {
@@ -556,16 +517,13 @@ header nav ul li:hover {
   color: #00b8ff;
   font-size: 2rem;
   text-align: center;
-  opacity: 1;
+  opacity: 0;
 }
 
 #description {
-  position: relative;
-  left: 15rem;
-  top: 5rem;
   margin: 10%;
   width: 80%;
-  opacity: 1;
+  opacity: 0;
 }
 
 #description p {
@@ -580,9 +538,9 @@ header nav ul li:hover {
 }
 
 #arrow-scroll {
-  opacity: 1;
+  opacity: 0;
   position: fixed;
-  right: 10rem;
+  right: 5rem;
   bottom: 5rem;
   font-size: 5rem;
   background: #00b8ff;
@@ -593,15 +551,15 @@ header nav ul li:hover {
 }
 
 #about {
-  margin: 35rem 10rem 5rem 10rem;
+  margin: 15rem 5% 5rem 5%;
   color: #AE00ED;
-  padding-top: 10rem;
+  padding-top: 5rem;
 }
 
 #about #about-title {
   font-size: 3rem;
-  width: 100%;
   color: #00b8ff;
+  margin-bottom: 6rem;
 }
 
 #about #about-description {
@@ -612,7 +570,7 @@ header nav ul li:hover {
   -webkit-box-shadow: 0 0 8px #fff, inset 0 0 8px #fff, 0 0 16px rgba(30, 132, 242, 0.52), inset 0 0 16px rgba(30, 132, 242, 0.78), 0 0 32px rgba(30, 132, 242, 0.78), inset 0 0 32px rgba(30, 132, 242, 0.92);
           box-shadow: 0 0 8px #fff, inset 0 0 8px #fff, 0 0 16px rgba(30, 132, 242, 0.52), inset 0 0 16px rgba(30, 132, 242, 0.78), 0 0 32px rgba(30, 132, 242, 0.78), inset 0 0 32px rgba(30, 132, 242, 0.92);
   padding: 3rem;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 #about img {
@@ -623,9 +581,9 @@ header nav ul li:hover {
   margin-right: 3rem;
 }
 
-.border {
-  margin: auto;
-  width: 60%;
+.separation {
+  margin: 7rem auto 0 auto;
+  width: 80%;
   border: solid 0.1rem #00b8ff;
   -webkit-box-shadow: 0 0 8px #fff, inset 0 0 8px #fff, 0 0 16px rgba(174, 0, 237, 0.52), inset 0 0 16px rgba(174, 0, 237, 0.78), 0 0 32px rgba(174, 0, 237, 0.78), inset 0 0 32px rgba(174, 0, 237, 0.92);
           box-shadow: 0 0 8px #fff, inset 0 0 8px #fff, 0 0 16px rgba(174, 0, 237, 0.52), inset 0 0 16px rgba(174, 0, 237, 0.78), 0 0 32px rgba(174, 0, 237, 0.78), inset 0 0 32px rgba(174, 0, 237, 0.92);
@@ -639,14 +597,13 @@ header nav ul li:hover {
   -webkit-box-direction: reverse;
       -ms-flex-flow: wrap column-reverse;
           flex-flow: wrap column-reverse;
-  margin: 15rem 10rem 5rem 10rem;
-  opacity: 1;
-  padding-top: 10rem;
+  margin: 15rem 5% 5rem 5%;
+  opacity: 0;
+  padding-top: 5rem;
 }
 
 #project-presentation h2 {
   font-size: 3rem;
-  width: 25rem;
   color: #00b8ff;
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
@@ -658,14 +615,11 @@ header nav ul li:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+      -ms-flex-flow: column;
+          flex-flow: column;
   color: #00b8ff;
-  width: 60%;
-  padding: 3rem;
-  overflow: hidden;
   margin: 3rem auto;
 }
 
@@ -714,12 +668,6 @@ header nav ul li:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
 }
 
 #project-presentation .project .icon-project .icon-langage {
@@ -756,7 +704,7 @@ header nav ul li:hover {
 }
 
 #project-presentation .project .text-project {
-  margin-left: 5rem;
+  margin-left: 2rem;
   font-size: 1.2rem;
 }
 
@@ -775,7 +723,6 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 30%;
   margin: auto;
   padding: 3rem;
   margin-bottom: 5rem;
@@ -839,13 +786,6 @@ footer #contact-info p:hover {
   header nav ul li a {
     display: inline-block;
     width: 6rem;
-  }
-}
-
-@media only screen and (min-width: 1441px) {
-  #description {
-    width: 59%;
-    margin: 10rem auto;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -7,6 +7,7 @@ html {
   background-color: $colour-background;
   font-family: "neuropolitical";
   scroll-behavior: smooth;
+  margin: 0;
 
   a {
     text-decoration: none;
@@ -21,49 +22,13 @@ h1 {
   margin-top: 15rem;
 }
 
-// Bouton On/Off
-#switch-container {
-  display: flex;
-  position: absolute;
-  top: 3rem;
-  left: 50%;
-  z-index: 5;
-
-  .switch {
-    position: absolute;
-    left: 50%;
-    color: $colour-primary;
-    cursor: pointer;
-    font-size: 3rem;
-  }
-
-  // Retirer les caractéristiques par défaut des boutons
-  #switch-on {
-    border: none;
-    background: none;
-  }
-
-  #switch-off {
-    border: none;
-    background: none;
-    opacity: 1;
-  }
-}
-
-// #page-container {
-//   opacity: 1;
-// }
-
 .sticky {
-  position: fixed;
+  position: sticky;
   top: 0;
-  width: 77.5%;
-  padding-top: 0.5rem;
+  left: 0;
   height: 5rem;
-}
-
-.sticky-padding {
-  padding-top: 15rem;
+  width: 100%;
+  margin: 0;
 }
 
 header {
@@ -71,21 +36,16 @@ header {
   flex-flow: wrap;
   align-items: center;
   justify-content: space-between;
-  margin: 0 0 10rem 0;
   background-color: $colour-background;
   z-index: 3;
   height: 5rem;
-  padding: 0 11%;
-  // padding-bottom: 5rem;
+  margin: 0 5%;
 
   #lang-choice {
     display: flex;
     flex-flow: row;
-    // position: absolute;
-    // top: 3rem;
-    // left: 5rem;
     font-family: "anurati";
-    opacity: 1;
+    opacity: 0;
 
     .lang-option {
       margin: 0 0.5rem;
@@ -99,7 +59,7 @@ header {
   }
 
   nav {
-    opacity: 1;
+    opacity: 0;
     font-family: "anurati";
 
     ul {
@@ -129,36 +89,25 @@ header {
 
 #page-title {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   flex-flow: row wrap;
-  margin: 0 5%;
-  // justify-content: space-around;
+  margin: 5rem 5%;
+
   #name {
-    position: relative;
-    bottom: 10rem;
     display: flex;
     color: $colour-secondary;
-    margin-top: 0;
-    width: 80%;
     // font-family: "anurati";
     // @include neon-text-shadow
 
-    #name-delay0 {
-      opacity: 1;
-    }
-
-    #name-delay1 {
-      opacity: 1;
-    }
-
     h1 {
-      margin-right: 3rem;
-      font-size: 5rem;
+      margin: 0 3rem 0 0;
+      font-size: 3rem;
+      opacity: 0;
     }
   }
 
   .social-links {
-    position: relative;
-    bottom: 10rem;
     display: flex;
     align-items: center;
   }
@@ -172,8 +121,7 @@ header {
   #front-end {
     color: $colour-secondary;
     font-size: 2rem;
-    position: relative;
-    bottom: 13rem;
+    opacity: 0;
   }
 }
 
@@ -185,20 +133,16 @@ header {
   color: $colour-secondary;
   font-size: 2rem;
   text-align: center;
-  opacity: 1;
+  opacity: 0;
 }
 
 #description {
-  position: relative;
-  left: 15rem;
-  top: 5rem;
   margin: 10%;
   width: 80%;
-  opacity: 1;
+  opacity: 0;
 
   p {
     color: $colour-primary;
-    // border: solid 0.2rem $colour-secondary;
     white-space: wrap;
     font-size: 1.7rem;
     font-weight: 200;
@@ -206,14 +150,13 @@ header {
     text-align: justify;
     white-space: wrap;
     font-family: "neuropolX";
-    // @include neon-box-shadow-secondary;
   }
 }
 
 #arrow-scroll {
-  opacity: 1;
+  opacity: 0;
   position: fixed;
-  right: 10rem;
+  right: 5rem;
   bottom: 5rem;
   font-size: 5rem;
   @include neon-arrow-scroll;
@@ -222,14 +165,14 @@ header {
 // A propos de moi
 
 #about {
-  margin: 35rem 10rem 5rem 10rem;
+  margin: 15rem 5% 5rem 5%;
   color: $colour-primary;
-  padding-top: 10rem;
+  padding-top: 5rem;
 
   #about-title {
     font-size: 3rem;
-    width: 100%;
     color: $colour-secondary;
+    margin-bottom: 6rem;
   }
 
   #about-description {
@@ -237,7 +180,7 @@ header {
     font-family: "neuropolX";
     @include neon-box-shadow-secondary;
     padding: 3rem;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   img {
@@ -250,9 +193,9 @@ header {
 
 // Présentation des projets
 
-.border {
-  margin: auto;
-  width: 60%;
+.separation {
+  margin: 7rem auto 0 auto;
+  width: 80%;
   border: solid 0.1rem $colour-secondary;
   @include neon-box-shadow-primary;
 }
@@ -260,13 +203,12 @@ header {
 #project-presentation {
   display: flex;
   flex-flow: wrap column-reverse;
-  margin: 15rem 10rem 5rem 10rem;
-  opacity: 1;
-  padding-top: 10rem;
+  margin: 15rem 5% 5rem 5%;
+  opacity: 0;
+  padding-top: 5rem;
 
   h2 {
     font-size: 3rem;
-    width: 25rem;
     color: $colour-secondary;
     order: 1;
     margin: 2rem auto;
@@ -274,13 +216,10 @@ header {
 
   .project {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column;
     color: $colour-secondary;
     // border: solid 0.2rem $colour-secondary;
     // @include neon-box-shadow-primary;
-    width: 60%;
-    padding: 3rem;
-    overflow: hidden;
     margin: 3rem auto;
 
     .project-header {
@@ -317,8 +256,6 @@ header {
 
     .icon-project {
       display: flex;
-      justify-content: flex-end;
-      align-items: flex-end;
 
       .icon-langage {
         margin: 0 0.5rem;
@@ -351,15 +288,11 @@ header {
     }
 
     .text-project {
-      margin-left: 5rem;
+      margin-left: 2rem;
       font-size: 1.2rem;
     }
   }
 }
-// .project-right-align {
-//   position: relative;
-//   left: 50rem;
-// }
 
 footer {
   color: $colour-secondary;
@@ -367,7 +300,6 @@ footer {
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-  width: 30%;
   margin: auto;
   padding: 3rem;
   margin-bottom: 5rem;

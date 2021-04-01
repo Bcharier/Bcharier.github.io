@@ -131,7 +131,7 @@ function langSwitchFr() {
   navProjects.innerHTML = "PROJETS";
   navProjects.classList.add("lang-switch");
   navContact.classList.add("lang-switch");
-  descriptionText.innerHTML = `Passionné de code et curieux de nature, je suis à la recherche d'une
+  descriptionText.innerHTML = `Passionné de code, curieux et rigoureux, je suis à la recherche d'une
   entreprise pour m'accompagner dans ma formation en alternance.`
   descriptionText.classList.add("lang-switch");
   responsiveHome.innerHTML = `ACCUEIL`;

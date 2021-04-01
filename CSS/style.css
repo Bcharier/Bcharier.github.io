@@ -446,6 +446,14 @@ header nav ul li:hover {
   text-shadow: 0 0 6px rgba(202, 228, 225, 0.92), 0 0 30px rgba(202, 228, 225, 0.34), 0 0 12px rgba(30, 132, 242, 0.52), 0 0 21px rgba(30, 132, 242, 0.92), 0 0 34px rgba(30, 132, 242, 0.78), 0 0 54px rgba(30, 132, 242, 0.92);
 }
 
+#nav-responsive {
+  display: none;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
 #page-title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -672,6 +680,11 @@ header nav ul li:hover {
      object-position: top;
 }
 
+#project-presentation .project .description-project img:hover {
+  -webkit-box-shadow: 0 0 8px #fff, inset 0 0 8px #fff, 0 0 16px rgba(30, 132, 242, 0.52), inset 0 0 16px rgba(30, 132, 242, 0.78), 0 0 32px rgba(30, 132, 242, 0.78), inset 0 0 32px rgba(30, 132, 242, 0.92);
+          box-shadow: 0 0 8px #fff, inset 0 0 8px #fff, 0 0 16px rgba(30, 132, 242, 0.52), inset 0 0 16px rgba(30, 132, 242, 0.78), 0 0 32px rgba(30, 132, 242, 0.78), inset 0 0 32px rgba(30, 132, 242, 0.92);
+}
+
 #project-presentation .project .icon-project {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -767,17 +780,62 @@ footer #contact-info p:hover {
   text-shadow: 0 0 6px rgba(202, 228, 225, 0.92), 0 0 30px rgba(202, 228, 225, 0.34), 0 0 12px rgba(30, 132, 242, 0.52), 0 0 21px rgba(30, 132, 242, 0.92), 0 0 34px rgba(30, 132, 242, 0.78), 0 0 54px rgba(30, 132, 242, 0.92);
 }
 
-@media only screen and (max-width: 431px) {
-  header {
-    padding: 0;
-  }
-  header nav ul {
+@media only screen and (max-width: 900px) {
+  html,
+  body {
     margin: 0;
     padding: 0;
   }
+  header {
+    padding: 0;
+    margin: 0;
+  }
+  header nav {
+    opacity: 1;
+  }
   header nav ul li {
-    font-size: 0.8rem;
-    margin: 0 1rem;
+    display: none;
+  }
+  .hamburger-menu {
+    display: block;
+    color: #00b8ff;
+    font-size: 1.5rem;
+    margin-right: 1.5rem;
+    opacity: 0;
+  }
+  .hamburger-menu:hover {
+    text-shadow: 0 0 6px rgba(202, 228, 225, 0.92), 0 0 30px rgba(202, 228, 225, 0.34), 0 0 12px rgba(30, 132, 242, 0.52), 0 0 21px rgba(30, 132, 242, 0.92), 0 0 34px rgba(30, 132, 242, 0.78), 0 0 54px rgba(30, 132, 242, 0.92);
+  }
+  #close-icon {
+    display: none;
+    color: #00b8ff;
+    font-size: 1.5rem;
+  }
+  #nav-responsive {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: #060E1A;
+    z-index: 5;
+  }
+  #nav-responsive div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 1.5rem;
+    margin: 1.5rem auto;
+  }
+  #nav-responsive div a:hover {
+    text-shadow: 0 0 6px rgba(202, 228, 225, 0.92), 0 0 30px rgba(202, 228, 225, 0.34), 0 0 12px rgba(30, 132, 242, 0.52), 0 0 21px rgba(30, 132, 242, 0.92), 0 0 34px rgba(30, 132, 242, 0.78), 0 0 54px rgba(30, 132, 242, 0.92);
+  }
+  #nav-responsive div a {
+    color: #00b8ff;
   }
   #page-title {
     margin: 1.5rem 5%;
@@ -824,7 +882,7 @@ footer #contact-info p:hover {
     position: fixed;
     right: 0.3rem;
     bottom: 2rem;
-    font-size: 3rem;
+    font-size: 2.5rem;
     background: #00b8ff;
     background: linear-gradient(162deg, #00b8ff 0%, #d600ff 69%);
     background-clip: text;
@@ -832,7 +890,7 @@ footer #contact-info p:hover {
     -webkit-text-fill-color: transparent;
   }
   #about {
-    margin: 5rem auto;
+    margin: 5rem 5%;
   }
   #about #about-title {
     display: -webkit-box;
@@ -860,7 +918,7 @@ footer #contact-info p:hover {
     margin: 3rem auto 3rem auto;
   }
   #project-presentation {
-    margin: 5rem auto 1.5rem auto;
+    margin: 5rem 5% 1.5rem 5%;
   }
   #project-presentation h2 {
     font-size: 1.8rem;

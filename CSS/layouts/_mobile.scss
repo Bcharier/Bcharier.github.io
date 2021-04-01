@@ -1,15 +1,62 @@
-@media only screen and (max-width: 431px) {
+@media only screen and (max-width: 900px) {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
   header {
     padding: 0;
+    margin: 0;
 
     nav {
+      opacity: 1;
       ul {
-        margin: 0;
-        padding: 0;
         li {
-          font-size: 0.8rem;
-          margin: 0 1rem;
+          display: none;
         }
+      }
+    }
+  }
+
+  .hamburger-menu {
+    display: block;
+    color: $colour-secondary;
+    font-size: 1.5rem;
+    margin-right: 1.5rem;
+    opacity: 0;
+  }
+
+  .hamburger-menu:hover {
+    @include neon-text-shadow;
+  }
+
+  #close-icon {
+    display: none;
+    color: $colour-secondary;
+    font-size: 1.5rem;
+  }
+
+  #nav-responsive {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: $colour-background;
+    z-index: 5;
+
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5rem;
+      margin: 1.5rem auto;
+
+      a:hover {
+        @include neon-text-shadow;
+      }
+
+      a {
+        color: $colour-secondary;
       }
     }
   }
@@ -60,12 +107,12 @@
     position: fixed;
     right: 0.3rem;
     bottom: 2rem;
-    font-size: 3rem;
+    font-size: 2.5rem;
     @include neon-arrow-scroll;
   }
 
   #about {
-    margin: 5rem auto;
+    margin: 5rem 5%;
 
     #about-title {
       display: flex;
@@ -91,7 +138,7 @@
   }
 
   #project-presentation {
-    margin: 5rem auto 1.5rem auto;
+    margin: 5rem 5% 1.5rem 5%;
 
     h2 {
       font-size: 1.8rem;
@@ -144,7 +191,7 @@
     #contact-info {
       display: flex;
 
-      p{
+      p {
         font-size: 1.4rem;
         margin: 0 1.5rem;
       }

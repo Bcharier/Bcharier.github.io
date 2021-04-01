@@ -84,6 +84,14 @@ header {
   }
 }
 
+#nav-responsive {
+  display: none;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
 // Section titre
 
 #page-title {
@@ -253,6 +261,10 @@ header {
       width: 30rem;
       object-fit: cover;
       object-position: top;
+    }
+
+  .description-project img:hover {
+      @include neon-box-shadow-secondary;
     }
 
     .icon-project {

@@ -32,6 +32,30 @@
           </li>
         </ul>
       </nav>
+      <a
+        href="javascript:void(0);"
+        class="hamburger-menu"
+        onclick="responsiveNav()"
+      >
+        <i class="fas fa-bars" id="hamburger-icon"></i
+        ><i class="fas fa-times" id="close-icon"></i
+      ></a>
+      <nav id="nav-responsive">
+        <div class="responsive-links">
+          <a href="#body-home" id="responsive-home">ACCUEIL</a>
+        </div>
+        <div class="responsive-links">
+          <a href="#about" id="responsive-about">A PROPOS</a>
+        </div>
+        <div class="responsive-links">
+          <a href="#project-presentation" id="responsive-projects"
+            >MES PROJETS</a
+          >
+        </div>
+        <div class="responsive-links">
+          <a href="#contact" id="responsive-contact">CONTACT</a>
+        </div>
+      </nav>
       <!-- Liens vers réseaux sociaux -->
     </header>
     <!-- Job description -->
@@ -77,14 +101,12 @@
       </div>
 
       <!-- Flèches pour scroll -->
-      <a href="#about"
-        ><i id="arrow-scroll" class="fas fa-angle-double-down"></i
-      ></a>
+      <i id="arrow-scroll" class="fas fa-angle-double-down"></i>
 
       <section id="about">
         <h2 id="about-title">A propos de moi</h2>
         <div id="about-description">
-          <img src="./images/BC_photo.jpg" alt="photo de Baptiste Charier" />
+          <img src="./images/bc_photo.jpg" alt="photo de Baptiste Charier" />
           <div id="about-text">
             <p>
               Après une première carrière dans la gestion de projet
@@ -114,7 +136,7 @@
               <i class="fab fa-css3-alt icon-langage icon-css"></i>
             </div>
             <a
-              href="https://github.com/Bcharier/OC_P2_Reservia"
+              href="https://github.com/Bcharier/reservia"
               target="_blank"
               rel="noopener noreferrer"
               ><i class="fab fa-github-square project-github-link"></i
@@ -127,11 +149,11 @@
               rel="noopener noreferrer"
             >
               <img
-                src="./images/Reservia.png"
+                src="./images/reservia.png"
                 alt="Image de la page d'accueil du site Réservia"
               />
             </a>
-            <div class="text-project">
+            <div class="text-project" id="text-reservia">
               <p>Projet OpenClassrooms</p>
               <p>
                 Création de la page d'accueil d'un site de locations de
@@ -155,7 +177,7 @@
               <i class="fab fa-sass icon-langage icon-sass"></i>
             </div>
             <a
-              href="https://github.com/Bcharier/OC_P3_OhMyFood"
+              href="https://github.com/Bcharier/ohmyfood"
               target="_blank"
               rel="noopener noreferrer"
               ><i class="fab fa-github-square project-github-link"></i
@@ -168,11 +190,11 @@
               rel="noopener noreferrer"
             >
               <img
-                src="./images/OhMyFood.png"
+                src="./images/ohmyfood.png"
                 alt="Image de la page d'accueil du site OhMyFood"
               />
             </a>
-            <div class="text-project">
+            <div class="text-project" id="text-ohmyfood">
               <p>Projet OpenClassrooms</p>
               <p>
                 Création d'une application web pour réserver ses repas en ligne
@@ -197,7 +219,7 @@
               <i class="fab fa-js-square icon-langage icon-js"></i>
             </div>
             <a
-              href="https://github.com/Bcharier/OC_P4_GameOn"
+              href="https://github.com/Bcharier/gameon"
               target="_blank"
               rel="noopener noreferrer"
               ><i class="fab fa-github-square project-github-link"></i
@@ -209,9 +231,9 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="./images/GameOn.png" alt="Image du site GameOn" />
+              <img src="./images/gameon.png" alt="Image du site GameOn" />
             </a>
-            <div class="text-project">
+            <div class="text-project" id="text-gameon">
               <p>Projet OpenClassrooms</p>
               <p>
                 Réalisation d'un formulaire de contact avec validation des
@@ -239,7 +261,7 @@
               <i class="fab fa-js-square icon-langage icon-js"></i>
             </div>
             <a
-              href="https://github.com/Bcharier/OC_P6_FishEye"
+              href="https://github.com/Bcharier/fisheye"
               target="_blank"
               rel="noopener noreferrer"
               ><i class="fab fa-github-square project-github-link"></i
@@ -251,9 +273,9 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="./images/FishEye.png" alt="Image du site FishEye" />
+              <img src="./images/fisheye.png" alt="Image du site FishEye" />
             </a>
-            <div class="text-project">
+            <div class="text-project" id="text-fisheye">
               <p>Projet OpenClassrooms - En cours de réalisation</p>
               <p>Création d'une plateforme de promotion de photographes</p>
               <ul>
@@ -271,10 +293,11 @@
       </section>
     </main>
     <footer id="contact">
-      <h2>Contactez moi</h2>
+      <h2 id="contact-title">Contactez moi</h2>
       <div id="contact-info">
         <p>
           <a
+            id="contact-linkedin"
             href="https://www.linkedin.com/in/baptiste-charier/"
             target="_blank"
             rel="noopener noreferrer"
@@ -284,6 +307,7 @@
         </p>
         <p>
           <a
+            id="contact-mail"
             href="mailto:charier.ba@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
@@ -292,6 +316,6 @@
         </p>
       </div>
     </footer>
-    <script src="JS/index.js" type="text/javaScript"></script>
+    <script src="JS/index.js"></script>
   </body>
 </html>

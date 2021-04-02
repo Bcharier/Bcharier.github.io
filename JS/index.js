@@ -6,7 +6,7 @@ const linkedinLink = document.getElementById("linkedin-link");
 const emailLink = document.getElementById("email-link");
 const jobDescription = document.getElementById("job-description");
 const description = document.getElementById("description");
-const arrowScroll = document.getElementById("arrow-scroll");
+const arrowScroll = document.querySelectorAll(".arrow-scroll");
 const projects = document.getElementsByClassName("project-presentation");
 const projectPresentation = document.getElementById("project-presentation");
 const buttonLang = document.getElementById("lang-choice");
@@ -34,49 +34,16 @@ const aboutTitle = document.getElementById("about-title");
 const aboutText = document.getElementById("about-text");
 const projectTitle = document.getElementById("project-title");
 const textReservia = document.getElementById("text-reservia");
-const textOhmfood = document.getElementById("text-ohmyfood");
+const textOhmyfood = document.getElementById("text-ohmyfood");
 const textGameon = document.getElementById("text-gameon");
 const textFisheye = document.getElementById("text-fisheye");
-const contactTitle = document.getElementById ("contact-title");
+const contactTitle = document.getElementById("contact-title");
 const contactLinkedin = document.getElementById("contact-linkedin");
 const contactMail = document.getElementById("contact-mail");
+const arrowScrollDown = document.getElementById("arrow-scroll-down");
+const arrowScrollUp = document.getElementById("arrow-scroll-up");
+const contactSection = document.getElementById("contact");
 
-/* 
-Apparition des éléments on scroll
-*/
-
-var myScrollFunc = function () {
-  var y = window.scrollY;
-  if (y > 0) {
-    header.classList.add("sticky");
-    // main.classList.add("sticky-padding");
-  }
-
-  if (y == 0) {
-    header.classList.remove("sticky");
-    // main.classList.remove("sticky-padding");
-  }
-
-  if (y >= 500) {
-    projectPresentation.classList.add("projects-appear");
-  }
-
-  if (y >= 4200) {
-    arrowScroll.classList.remove("scroll-appear");
-    arrowScroll.classList.remove("scroll-appear-again");
-  }
-
-  if (y <= 4200) {
-    arrowScroll.classList.add("scroll-appear-again");
-  }
-
-  else {
-  }
-};
-
-
-
-window.addEventListener("scroll", myScrollFunc);
 
 /* 
 Changement de la langue de la page 
@@ -118,6 +85,51 @@ function langSwitchEn() {
   contactLinkedin.classList.add("lang-switch");
   contactMail.innerHTML = `By Mail`;
   contactMail.classList.add("lang-switch");
+  textReservia.innerHTML = `
+  <p> OpenClassrooms project</p>
+  <p>
+    Integration of the homepage of an apartement rental web app
+  </p>
+  <ul>
+  <li>Responsive on mobile and tablet</li>
+    <li>Use of flexbox to organize elements</li>
+  </ul>`;
+
+  textReservia.classList.add("lang-switch");
+  textOhmyfood.innerHTML = `<p> OpenClassrooms project</p>
+  <p>
+    Integration of an online meal reservation web app
+  </p>
+  <ul>
+    <li>Responsive on mobile and tablet</li>
+    <li>CSS Keyframes animations</li>
+    <li>Use of SASS for CSS organization</li>
+  </ul>`;
+  textOhmyfood.classList.add("lang-switch");
+  textGameon.innerHTML = ` <p> OpenClassrooms project</p>
+  <p>
+    Creation of a contact form with field validation for online video games tournament organization
+  </p>
+  <ul>
+  <li>Responsive on mobile and tablet</li>
+    <li>Integration of a contact form with JS</li>
+    <li>
+      Field validation with error messages
+    </li>
+  </ul>`;
+  textGameon.classList.add("lang-switch");
+  textFisheye.innerHTML = `<p>OpenClassrooms project - Work In Progress</p>
+  <p>Creation of a photographer promotionnal web app</p>
+  
+  <ul>
+  <li>Responsive on mobile and tablet</li>
+    <li>
+    Dynamic generation of informations through Json data
+    </li>
+    <li>Filters to browse through pictures and photographers</li>
+    <li>Lightbox to visualize pictures and videos</li>
+  </ul>`;
+  textFisheye.classList.add("lang-switch");
   setTimeout(clearClass, 1500);
 }
 
@@ -128,7 +140,7 @@ function langSwitchFr() {
   alternance.classList.add("lang-switch");
   navAbout.innerHTML = "A PROPOS";
   navAbout.classList.add("lang-switch");
-  navProjects.innerHTML = "PROJETS";
+  navProjects.innerHTML = "MES PROJETS";
   navProjects.classList.add("lang-switch");
   navContact.classList.add("lang-switch");
   descriptionText.innerHTML = `Passionné de code, curieux et rigoureux, je suis à la recherche d'une
@@ -156,6 +168,50 @@ function langSwitchFr() {
   contactLinkedin.classList.add("lang-switch");
   contactMail.innerHTML = `Par Mail`;
   contactMail.classList.add("lang-switch");
+  textReservia.innerHTML = `<p>Projet OpenClassrooms</p>
+  <p>
+    Création d'une application web pour réserver ses repas en ligne
+  </p>
+  <ul>
+    <li>Site responsif mobile et tablette</li>
+    <li>Animations CSS keyframes</li>
+    <li>Mise en place de SASS</li>
+  </ul>`;
+  textReservia.classList.add("lang-switch");
+  textOhmyfood.innerHTML = `<p>Projet OpenClassrooms</p>
+  <p>
+    Création d'une application web pour réserver ses repas en ligne
+  </p>
+  <ul>
+    <li>Site responsif mobile et tablette</li>
+    <li>Animations CSS keyframes</li>
+    <li>Mise en place de SASS</li>
+  </ul>`;
+  textOhmyfood.classList.add("lang-switch");
+  textGameon.innerHTML = ` <p>Projet OpenClassrooms</p>
+  <p>
+    Réalisation d'un formulaire de contact avec validation des
+    champs pour un site d'organisation de tournois de jeux-vidéo
+  </p>
+  <ul>
+    <li>Site responsif mobile</li>
+    <li>Mise en place d'un formulaire de contact en JavaScript</li>
+    <li>
+      Validation des champs et affichage de messages d'erreurs
+    </li>
+  </ul>`;
+  textGameon.classList.add("lang-switch");
+  textFisheye.innerHTML = `<p>Projet OpenClassrooms - En cours de réalisation</p>
+  <p>Création d'une plateforme de promotion de photographes</p>
+  <ul>
+    <li>Site responsif mobile</li>
+    <li>
+      Génération dynamique des informations via des données Json
+    </li>
+    <li>Filtres de recherche pour trier les photographes</li>
+    <li>Lightbox pour visionner photos et vidéos</li>
+  </ul>`;
+  textFisheye.classList.add("lang-switch");
   setTimeout(clearClass, 1500)
 }
 
@@ -176,6 +232,10 @@ function clearClass() {
   contactTitle.classList.remove("lang-switch");
   contactLinkedin.classList.remove("lang-switch");
   contactMail.classList.remove("lang-switch");
+  textReservia.classList.remove("lang-switch");
+  textOhmyfood.classList.remove("lang-switch");
+  textGameon.classList.remove("lang-switch");
+  textFisheye.classList.remove("lang-switch");
 }
 
 /* 
@@ -183,18 +243,27 @@ Apparition des éléments au chargement de la page
 */
 
 const lightsOn = () => {
-  firstName.classList.add("name-appear-delay0");
-  lastName.classList.add("name-appear-delay1");
-  frontEnd.classList.add("item-appear-delay0");
-  jobDescription.classList.add("small-title-appear");
-  description.classList.add("item-appear-delay1");
-  githubLink.classList.add("socials-appear-delay0");
-  linkedinLink.classList.add("socials-appear-delay1");
-  emailLink.classList.add("socials-appear-delay2");
-  arrowScroll.classList.add("scroll-appear");
-  buttonLang.classList.add("item-appear-delay0");
-  nav.classList.add("item-appear-delay0");
-  hamburgerMenu.classList.add("item-appear-delay0");
+  if (window.innerWidth > 0) {
+    firstName.classList.add("name-appear-delay0");
+    lastName.classList.add("name-appear-delay1");
+    frontEnd.classList.add("item-appear-delay0");
+    jobDescription.classList.add("small-title-appear");
+    description.classList.add("item-appear-delay1");
+    githubLink.classList.add("socials-appear-delay0");
+    linkedinLink.classList.add("socials-appear-delay1");
+    emailLink.classList.add("socials-appear-delay2");
+    buttonLang.classList.add("item-appear-delay0");
+    nav.classList.add("item-appear-delay0");
+    hamburgerMenu.classList.add("item-appear-delay0");
+  }
+  if (window.innerWidth > 900) {
+    arrowScrollDown.classList.add("scroll-appear");
+  }
+
+  if (window.innerWidth < 900) {
+    arrowScrollDown.style.display = "none";
+    arrowScrollUp.style.display = "none";
+  }
 }
 
 lightsOn();
@@ -224,3 +293,103 @@ function closeResponsiveNav() {
   closeIcon.style.display = "none";
   hamburgerIcon.style.display = "inline-block";
 }
+
+/* 
+Scroll to next section with arrows
+*/
+
+arrowScrollDown.addEventListener("click", scrollToNextSection);
+arrowScrollUp.addEventListener("click", scrollToTop);
+
+function scrollToNextSection() {
+  const pageTitle = document.getElementById("page-title");
+  const aboutSection = document.getElementById("about");
+
+
+  let aboutPosition = (header.offsetHeight + pageTitle.offsetHeight + jobDescription.offsetHeight + description.offsetHeight + (aboutSection.offsetHeight / 2));
+
+  let projectsPosition = (header.offsetHeight + pageTitle.offsetHeight + jobDescription.offsetHeight + description.offsetHeight + aboutSection.offsetHeight + (projectPresentation.offsetHeight / 4));
+
+  let contactPosition = document.body.offsetHeight;
+
+  if (window.scrollY < (aboutPosition)) {
+    window.scrollTo(0, aboutPosition);
+  }
+
+  if (window.scrollY >= aboutPosition - 500 && window.scrollY < projectsPosition) {
+    window.scrollTo(0, projectsPosition);
+  }
+
+  if (window.scrollY >= projectsPosition - 500) {
+    window.scrollTo(0, contactPosition);
+  }
+}
+
+function scrollToTop() {
+  const pageTitle = document.getElementById("page-title");
+  const aboutSection = document.getElementById("about");
+  let contactPosition = (header.offsetHeight + pageTitle.offsetHeight + jobDescription.offsetHeight + description.offsetHeight + aboutSection.offsetHeight + projectPresentation.offsetHeight);
+
+  if (window.scrollY >= contactPosition) {
+    window.scrollTo(0, 0);
+  }
+}
+
+/* 
+Apparition des éléments on scroll
+*/
+
+function myScrollFunction() {
+  const pageTitle = document.getElementById("page-title");
+  const aboutSection = document.getElementById("about");
+
+  let y = window.scrollY;
+  let descriptionPosition = (header.offsetHeight + pageTitle.offsetHeight + jobDescription.offsetHeight + description.offsetHeight);
+
+  let aboutPosition = (header.offsetHeight + pageTitle.offsetHeight + jobDescription.offsetHeight + description.offsetHeight + aboutSection.offsetHeight);
+
+  let projectsPosition = (header.offsetHeight + pageTitle.offsetHeight + jobDescription.offsetHeight + description.offsetHeight + aboutSection.offsetHeight + projectPresentation.offsetHeight);
+
+  if (y > 0) {
+    header.classList.add("sticky");
+  }
+
+  if (y == 0) {
+    header.classList.remove("sticky");
+  }
+
+  if (y > aboutPosition) {
+    projectPresentation.classList.add("section-appear");
+  }
+
+  if (y > descriptionPosition) {
+    aboutSection.classList.add("section-appear");
+  }
+
+  if (y > projectsPosition && window.innerWidth > 900) {
+    contactSection.classList.add("section-appear");
+  }
+
+  if (window.innerWidth < 900) {
+    contactSection.style.opacity = "1";
+  }
+
+  if (y > 4200 && window.innerWidth > 900) {
+    arrowScrollDown.classList.remove("scroll-appear");
+    arrowScrollDown.classList.remove("scroll-appear-again");
+    arrowScrollUp.classList.add("scroll-appear-fast");
+    arrowScrollUp.style.display = "block";
+    arrowScrollDown.style.display = "none";
+  }
+
+  if (y < 4200 && window.innerWidth > 900) {
+    arrowScrollDown.classList.add("scroll-appear-again");
+    arrowScrollUp.classList.remove("scroll-appear-fast");
+    arrowScrollUp.style.display = "none";
+    arrowScrollDown.style.display = "block";
+  }
+}
+
+
+window.addEventListener("scroll", myScrollFunction);
+

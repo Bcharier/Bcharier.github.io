@@ -138,7 +138,11 @@
 }
 
 .scroll-appear-again {
-  animation: scroll-flash 3500ms 1000ms infinite;
+  animation: scroll-flash 3500ms 600ms infinite;
+}
+
+.scroll-appear-fast {
+  animation: scroll-flash 3500ms 300ms infinite;
 }
 
 // Animation bouton On/Off
@@ -172,7 +176,7 @@
 
 // Apparition projets
 
-@keyframes projects-appear {
+@keyframes section-appear {
   0% {
     opacity: 0;
   }
@@ -182,8 +186,8 @@
   }
 }
 
-.projects-appear {
-  animation: projects-appear 700ms forwards;
+.section-appear {
+  animation: section-appear 700ms forwards;
 }
 
 // Animation changement de langue

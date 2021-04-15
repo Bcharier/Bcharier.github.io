@@ -176,6 +176,87 @@ header {
   }
 }
 
+// Skills
+
+.skills {
+  margin: 0 5vw 5rem 5vw;
+  padding-top: 5rem;
+  opacity: 0;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  justify-content: space-around;
+
+  h2 {
+    width: 100%;
+    margin: 0 0 5rem 0;
+    font-size: 3rem;
+    font-family: "good_times";
+    border-bottom: solid $colour-primary 0.2rem;
+  }
+
+  h3 {
+    font-family: "good_times";
+    font-size: 1.5rem;
+    width: 100%;
+    text-align: center;
+
+    span {
+      color: $colour-primary;
+    }
+  }
+
+  div {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    i {
+      font-size: 2.5rem;
+      opacity: 0.9;
+    }
+
+    .icon-html {
+      color: #e34c26;
+    }
+
+    .icon-css {
+      color: #264de4;
+    }
+
+    .icon-sass {
+      color: #CD6799;
+    }
+
+    .icon-js {
+      color: #f0db4f;
+    }
+
+    .icon-react {
+      color: #61DBFB;
+    }
+
+    .icon-git {
+      color: #f34f29;
+    }
+     
+
+    p {
+      font-weight: 500;
+      font-size: 1.2rem;
+    }
+  }
+
+  .hard-skills {
+    position: relative;
+    bottom: 3.1rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+  }
+}
+
 // Présentation des projets
 
 .project-presentation {

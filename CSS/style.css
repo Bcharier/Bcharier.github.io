@@ -183,7 +183,7 @@ header #lang-choice .lang-option:after {
   height: 0.1em;
   -webkit-transition: width 300ms;
   transition: width 300ms;
-  background-color: #B5FF13;
+  background-color: #ffdf2b;
 }
 
 header #lang-choice .lang-option:hover:after {
@@ -201,7 +201,7 @@ header .social-links i {
 }
 
 header .social-links i:hover {
-  color: #B5FF13;
+  color: #ffdf2b;
 }
 
 header nav {
@@ -230,7 +230,7 @@ header nav ul li:after {
   height: 0.1em;
   -webkit-transition: width 300ms;
   transition: width 300ms;
-  background-color: #B5FF13;
+  background-color: #ffdf2b;
 }
 
 header nav ul li:hover:after {
@@ -268,7 +268,7 @@ header nav ul li:hover:after {
   font-size: 3rem;
   opacity: 1;
   width: 100%;
-  color: #B5FF13;
+  color: #ffdf2b;
 }
 
 #page-title .job-description {
@@ -292,7 +292,7 @@ header nav ul li:hover:after {
   font-size: 3rem;
   margin-bottom: 6rem;
   font-family: "good_times";
-  border-bottom: solid #B5FF13 0.2rem;
+  border-bottom: solid #ffdf2b 0.2rem;
 }
 
 #about #about-description {
@@ -321,6 +321,107 @@ header nav ul li:hover:after {
   margin: 0 5% 1em 5%;
 }
 
+.skills {
+  margin: 0 5vw 5rem 5vw;
+  padding-top: 5rem;
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.skills h2 {
+  width: 100%;
+  margin: 0 0 5rem 0;
+  font-size: 3rem;
+  font-family: "good_times";
+  border-bottom: solid #ffdf2b 0.2rem;
+}
+
+.skills h3 {
+  font-family: "good_times";
+  font-size: 1.5rem;
+  width: 100%;
+  text-align: center;
+}
+
+.skills h3 span {
+  color: #ffdf2b;
+}
+
+.skills div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.skills div i {
+  font-size: 2.5rem;
+  opacity: 0.9;
+}
+
+.skills div .icon-html {
+  color: #e34c26;
+}
+
+.skills div .icon-css {
+  color: #264de4;
+}
+
+.skills div .icon-sass {
+  color: #CD6799;
+}
+
+.skills div .icon-js {
+  color: #f0db4f;
+}
+
+.skills div .icon-react {
+  color: #61DBFB;
+}
+
+.skills div .icon-git {
+  color: #f34f29;
+}
+
+.skills div p {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.skills .hard-skills {
+  position: relative;
+  bottom: 3.1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
 .project-presentation {
   margin: 5% 5%;
   opacity: 0;
@@ -334,7 +435,7 @@ header nav ul li:hover:after {
       -ms-flex-order: 1;
           order: 1;
   font-family: "good_times";
-  border-bottom: solid #B5FF13 0.2rem;
+  border-bottom: solid #ffdf2b 0.2rem;
 }
 
 .project-presentation .project-container {
@@ -354,8 +455,8 @@ header nav ul li:hover:after {
 }
 
 .project-presentation .project-container .project:hover {
-  -webkit-box-shadow: 0.1em 0.2em 0.2em #B5FF13;
-          box-shadow: 0.1em 0.2em 0.2em #B5FF13;
+  -webkit-box-shadow: 0.1em 0.2em 0.2em #ffdf2b;
+          box-shadow: 0.1em 0.2em 0.2em #ffdf2b;
 }
 
 .project-presentation .project-container .project:hover .project-img {
@@ -417,7 +518,7 @@ header nav ul li:hover:after {
 .project-presentation .project-container .project .project-overlay h3 {
   font-size: 1.6rem;
   font-family: "good_times";
-  color: #B5FF13;
+  color: #ffdf2b;
 }
 
 .project-presentation .project-container .project .project-description {

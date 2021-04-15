@@ -33,6 +33,13 @@ const textPlats = document.querySelector("#text-plats");
 const textNba = document.querySelector("#text-nba");
 const incomingProjects = document.getElementById("incoming-projects-section");
 const incomingProjectsTitle = document.querySelector(".incoming-project-title");
+const skillsSection = document.querySelector(".skills");
+const skillsTitle = document.querySelector(".skills-title");
+const thorough = document.querySelector("#thorough");
+const adaptability = document.querySelector("#flexible");
+const learner = document.querySelector("#learner");
+const positivity = document.querySelector("#positivity");
+
 
 /* 
 Changement de la langue de la page 
@@ -78,6 +85,16 @@ function langSwitchEn() {
   textPlats.classList.add("lang-switch");
   textNba.innerHTML = "Tracker for NBA results and stats";
   textNba.classList.add("lang-switch");
+  thorough.innerHTML = "Thorough"
+  thorough.classList.add("lang-switch");
+  adaptability.innerHTML = "Flexible";
+  adaptability.classList.add("lang-switch");
+  learner.innerHTML = "Quick Learner";
+  learner.classList.add("lang-switch");
+  positivity.innerHTML = "Positivity";
+  positivity.classList.add("lang-switch");
+  skillsTitle.innerHTML = "Skills";
+  skillsTitle.classList.add("lang-switch");
   setTimeout(clearClass, 1500);
 }
 
@@ -120,6 +137,16 @@ function langSwitchFr() {
   textPlats.classList.add("lang-switch");
   textNba.innerHTML = "Suivi des résultats et stats NBA";
   textNba.classList.add("lang-switch");
+  thorough.innerHTML = "Rigueur";
+  thorough.classList.add("lang-switch");
+  adaptability.innerHTML = "Adaptabilité";
+  adaptability.classList.add("lang-switch");
+  learner.innerHTML = "Rapidité d'apprentissage"
+  learner.classList.add("lang-switch");
+  positivity.innerHTML = "Positivité";
+  positivity.classList.add("lang-switch");
+  skillsTitle.innerHTML = "Compétences";
+  skillsTitle.classList.add("lang-switch");
   setTimeout(clearClass, 1500)
 }
 
@@ -140,7 +167,11 @@ function clearClass() {
   textFisheye.classList.remove("lang-switch");
   incomingProjectsTitle.classList.remove("lang-switch");
   textPlats.classList.remove("lang-switch");
-  textNba.classList.remove("lang-switch");
+  thorough.classList.remove("lang-switch");
+  adaptability.classList.remove("lang-switch");
+  learner.classList.remove("lang-switch");
+  positivity.classList.remove("lang-switch");
+  skillsTitle.classList.remove("lang-switch");
 }
 
 /* 
@@ -178,9 +209,11 @@ function myScrollFunction() {
 
   let y = window.scrollY;
 
-  let aboutPosition = (header.offsetHeight + pageTitle.offsetHeight + aboutSection.offsetHeight - 300);
+  let aboutPosition = (header.offsetHeight + pageTitle.offsetHeight + aboutSection.offsetHeight - 600);
 
-  let projectsPosition = (header.offsetHeight + pageTitle.offsetHeight + aboutSection.offsetHeight + projectPresentation.offsetHeight - 300);
+  let skillsPosition = (aboutPosition + skillsSection.offsetHeight);
+
+  let projectsPosition = (skillsPosition + projectPresentation.offsetHeight);
 
   if (y > 0) {
     header.classList.add("sticky");
@@ -191,6 +224,10 @@ function myScrollFunction() {
   }
 
   if (y > aboutPosition) {
+    skillsSection.classList.add("section-appear");
+  }
+
+  if (y > skillsPosition) {
     projectPresentation.classList.add("section-appear");
   }
 

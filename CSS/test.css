@@ -1,0 +1,28 @@
+#switch-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 3rem;
+  left: 50%;
+  z-index: 5;
+}
+
+#switch-container .switch {
+  position: absolute;
+  left: 50%;
+  cursor: pointer;
+  font-size: 3rem;
+}
+
+#switch-container #switch-on {
+  border: none;
+  background: none;
+}
+
+#switch-container #switch-off {
+  border: none;
+  background: none;
+  opacity: 1;
+}
+/*# sourceMappingURL=test.css.map */

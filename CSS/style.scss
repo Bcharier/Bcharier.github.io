@@ -1,25 +1,19 @@
 @import "./base/font";
 @import "./utils/variables";
 @import "./components/animations";
-@import "./utils/mixins";
 
-html {
+html,
+body {
   background-color: $colour-background;
-  font-family: "neuropolitical";
+  font-family: "raleway";
   scroll-behavior: smooth;
   margin: 0;
+  color: $colour-text;
 
   a {
     text-decoration: none;
+    color: $colour-text;
   }
-}
-
-h1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: $colour-secondary;
-  margin-top: 15rem;
 }
 
 .sticky {
@@ -33,52 +27,76 @@ h1 {
 
 header {
   display: flex;
-  flex-flow: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
+  margin: auto;
   background-color: $colour-background;
   z-index: 3;
   height: 5rem;
-  margin: 0 5%;
+  margin: 0;
   font-family: "good_times";
+  width: 100%;
 
   #lang-choice {
     display: flex;
     flex-flow: row;
-    opacity: 0;
 
     .lang-option {
       margin: 0 0.5rem;
       cursor: pointer;
-      color: $colour-secondary;
       font-size: 1.2rem;
     }
-    .lang-option:hover {
-      @include neon-text-shadow;
+    .lang-option:after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0.1em;
+      transition: width 300ms;
+      background-color: $colour-primary;
+    }
+
+    .lang-option:hover:after {
+      width: 100%;
     }
   }
 
+  .social-links i {
+    color: $colour-text;
+    font-size: 1.8em;
+    margin: 1rem;
+    transition: transform 300ms;
+  }
+
+  .social-links i:hover {
+    color: $colour-primary;
+  }
+
   nav {
-    opacity: 0;
+    opacity: 1;
 
     ul {
       list-style-type: none;
       display: flex;
-      color: $colour-secondary;
 
       li {
+        display: inline-block;
         list-style-type: none;
         margin: 0 1rem;
         cursor: pointer;
         font-size: 1.2rem;
       }
 
-      a {
-        color: $colour-secondary;
+      li:after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0.1em;
+        transition: width 300ms;
+        background-color: $colour-primary;
       }
 
-      li:hover {
-        @include neon-text-shadow;
+      li:hover:after {
+        width: 100%;
       }
     }
   }
@@ -100,255 +118,196 @@ header {
   justify-content: space-between;
   flex-flow: row wrap;
   margin: 5rem 5%;
+  font-family: "good_times";
 
-  #name {
-    display: flex;
-    color: $colour-secondary;
-
-    h1 {
-      margin: 0 3rem 0 0;
-      font-size: 3rem;
-      opacity: 0;
-    }
-  }
-
-  .social-links {
-    display: flex;
-    align-items: center;
-  }
-
-  i {
-    color: $colour-background;
+  .section-name {
+    margin: 0;
     font-size: 3rem;
-    margin: 1rem;
-  }
-
-  i:hover {
-    @include neon-arrow-scroll;
-  }
-
-  #front-end {
-    color: $colour-secondary;
-    font-size: 2rem;
-    opacity: 0;
+    opacity: 1;
     width: 100%;
-  }
-}
-
-#job-description {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 0 5rem;
-  color: $colour-secondary;
-  font-size: 2rem;
-  text-align: center;
-  opacity: 0;
-}
-
-#description {
-  margin: 10%;
-  width: 80%;
-  opacity: 0;
-
-  p {
     color: $colour-primary;
-    white-space: wrap;
-    font-size: 1.7rem;
-    font-weight: 200;
-    padding: 2.5rem;
-    text-align: justify;
-    white-space: wrap;
-    font-family: "neuropolX";
   }
-}
 
-.arrow-scroll {
-  opacity: 0;
-  position: fixed;
-  right: 1vw;
-  bottom: 5rem;
-  font-size: 5rem;
-  @include neon-arrow-scroll;
-  cursor: pointer;
-  z-index: 10;
-}
-
-#arrow-scroll-up {
-  display: none;
-  transform: rotate(180deg);
+  .job-description {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 1.2rem;
+  }
 }
 
 // A propos de moi
 
 #about {
-  margin: 18rem 5% 5rem 5%;
-  color: $colour-primary;
+  margin: 0 5vw 5rem 5vw;
   padding-top: 5rem;
-  opacity: 0;
+  opacity: 1;
 
   #about-title {
     font-size: 3rem;
-    color: $colour-secondary;
     margin-bottom: 6rem;
+    font-family: "good_times";
+    border-bottom: solid $colour-primary 0.2rem;
   }
 
   #about-description {
     display: flex;
-    font-family: "neuropolX";
-    @include neon-box-shadow-secondary;
-    padding: 3rem;
-    font-size: 1.3rem;
-  }
 
-  img {
-    border-radius: 50%;
-    width: 15rem;
-    object-fit: cover;
-    margin-right: 3rem;
+    img {
+      border-radius: 5%;
+      width: 20em;
+      height: 17em;
+      object-fit: cover;
+      object-position: bottom;
+      margin-right: 1.5em;
+    }
+
+    #about-text {
+
+      p {
+        white-space: wrap;
+        font-size: 1.5em;
+        font-weight: 200;
+        text-align: justify;
+        white-space: wrap;
+        margin: 0 5% 1em 5%;
+      }
+    }
   }
 }
 
 // Présentation des projets
 
-.separation {
-  margin: 7rem auto 0 auto;
-  width: 80%;
-  border: solid 0.1rem $colour-secondary;
-  @include neon-box-shadow-primary;
-}
-
-#project-presentation {
-  display: flex;
-  flex-flow: wrap column-reverse;
-  margin: 15rem 5% 5rem 5%;
+.project-presentation {
+  margin: 5% 5%;
   opacity: 0;
-  padding-top: 5rem;
 
   h2 {
+    margin: 0 0 5rem 0;
+    padding-top: 5rem;
     font-size: 3rem;
-    color: $colour-secondary;
     order: 1;
-    margin: 2rem auto;
+    font-family: "good_times";
+    border-bottom: solid $colour-primary 0.2rem;
   }
 
-  .project {
+  .project-container {
     display: flex;
-    flex-flow: column;
-    color: $colour-secondary;
-    margin: 3rem auto;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
 
-    .project-header {
+    .project:hover {
+      box-shadow: 0.1em 0.2em 0.2em $colour-primary;
+    }
+
+    .project:hover .project-img {
+      opacity: 0.8;
+    }
+
+    .project:hover .project-overlay {
+      opacity: 0;
+      z-index: 0;
+    }
+
+    .incoming-project:hover .test-glitch {
+      opacity: 0.8;
+    }
+
+    .project {
       display: flex;
-      width: 95%;
-      justify-content: space-between;
-      align-items: center;
-      margin: 0 3% 1rem 3%;
+      flex-flow: column;
+      margin: 2% 2%;
+      box-shadow: 0.1em 0.3em 0.6em $colour-project-background;
+      border-radius: 5%;
 
-      .project-github-link {
-        color: $colour-background;
-        font-size: 3rem;
-        @include neon-text-shadow;
+      .project-overlay {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: space-around;
+        position: relative;
+        font-size: 1.5rem;
+        width: 30rem;
+        height: 24rem;
+        z-index: 5;
+        transition: opacity 300ms;
+        background-color: $colour-project-background;
+        border-radius: 5%;
+
+        .project-github-link {
+          color: $colour-text;
+          font-size: 3rem;
+        }
+
+        h3 {
+          font-size: 1.6rem;
+          font-family: "good_times";
+          color: $colour-primary;
+        }
       }
 
-      .project-github-link:hover {
-        @include neon-arrow-scroll;
+      .project-description {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        border-radius: 5%;
       }
 
-      h3 {
-        font-size: 2rem;
+      .project-img {
+        width: 30rem;
+        object-fit: cover;
+        object-position: top;
+        opacity: 0;
+        transition: opacity 300ms;
+        border-radius: 5%;
       }
-    }
 
-    .description-project {
-      display: flex;
-      width: 100%;
-    }
+      .project-icon {
+        display: flex;
+        position: relative;
 
-    .description-project img {
-      width: 30rem;
-      object-fit: cover;
-      object-position: top;
-    }
-
-    .description-project img:hover {
-      @include neon-box-shadow-secondary;
-    }
-
-    .icon-project {
-      display: flex;
-
-      .icon-langage {
-        margin: 0 0.5rem;
-        font-size: 3rem;
-        color: $colour-background;
-        @include neon-text-shadow;
-        background-clip: text;
-        -webkit-background-clip: text;
+        .icon-langage {
+          margin: 0 0.5rem;
+          font-size: 3rem;
+          color: $colour-text;
+        }
       }
-      .icon-js {
-        @include neon-text-shadow-js;
-        background-clip: text;
-        -webkit-background-clip: text;
+      .project-text {
+        font-size: 1em;
+        text-align: center;
+        padding: 0 15%;
       }
-      .icon-html {
-        @include neon-text-shadow-html;
-        background-clip: text;
-        -webkit-background-clip: text;
-      }
-      .icon-css {
-        @include neon-text-shadow-css;
-        background-clip: text;
-        -webkit-background-clip: text;
-      }
-      .icon-sass {
-        @include neon-text-shadow-sass;
-        background-clip: text;
-        -webkit-background-clip: text;
-      }
-    }
-
-    .text-project {
-      margin-left: 2rem;
-      font-size: 1.2rem;
-      max-width: 50rem;
     }
   }
 }
 
-footer {
-  color: $colour-secondary;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  padding: 3rem;
-  margin-bottom: 5rem;
+// Glitch animation WIP
+.test-glitch {
+  font-family: "good_times";
+  text-align: center;
+  font-size: 1.5rem;
   opacity: 0;
+  text-transform: uppercase;
+}
 
-  h2 {
-    font-size: 3rem;
-    display: flex;
-    justify-content: center;
-  }
+.test-glitch span {
+  position: absolute;
+  top: 7em;
+  left: 6.5em;
+}
 
-  #contact-info {
-    display: flex;
+.test-glitch span:first-child {
+  clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+  transform: translate(-0.025em, -0.0125em);
+  animation: glitch-effect infinite 650ms;
+}
 
-    p {
-      cursor: pointer;
-      font-size: 2rem;
-      margin: 0 3rem;
-
-      a {
-        color: $colour-secondary;
-      }
-    }
-    p:hover {
-      @include neon-text-shadow;
-    }
-  }
+.test-glitch span:last-child {
+  clip-path: polygon(0 80%, 100% 20%, 100% 100%, 0 100%);
+  transform: translate(0.0125em, 0.025em);
+  animation: glitch-effect infinite 650ms;
 }
 
 @import "./layouts/mobile";

@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="CSS/style.css" />
     <link rel="stylesheet" type="text/css" href="/icons//css/all.css" />
-    <title>Portfolio Baptiste Charier</title>
+    <title>Baptiste Charier - Développeur front-end</title>
   </head>
-  < id="body-home">
+  <section id="body-home">
     <!-- Header -->
     <header>
       <div id="lang-choice">
@@ -16,6 +16,30 @@
         <p class="lang-option" id="button-en">EN</p>
       </div>
 
+      <!-- Liens vers réseaux sociaux -->
+      <address class="social-links">
+        <a
+          href="https://github.com/Bcharier"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i id="github-link" class="fab fa-github-square"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/baptiste-charier/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i id="linkedin-link" class="fab fa-linkedin"></i
+        ></a>
+        <a href="./Ressources/CV_Charier_Baptiste.pdf" target="_blank" rel="noopener noreffer" id="cv-link"><i class="fas fa-file-pdf"></i></a>
+        <a
+          href="mailto:charier.ba@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i id="email-link" class="fas fa-envelope"></i
+        ></a>
+      </address>
+
+      <!-- Menu de navigation -->
       <nav id="nav-menu">
         <ul>
           <li class="nav-link" id="nav-home">
@@ -25,13 +49,12 @@
             <a href="#about">A PROPOS</a>
           </li>
           <li class="nav-link" id="nav-projects">
-            <a href="#project-presentation">MES PROJETS</a>
-          </li>
-          <li class="nav-link" id="nav-contact">
-            <a href="#contact">CONTACT</a>
+            <a href="#project-presentation">PROJETS</a>
           </li>
         </ul>
       </nav>
+
+      <!-- Menu de navigation responsif -->
       <a
         href="javascript:void(0);"
         class="hamburger-menu"
@@ -49,66 +72,34 @@
         </div>
         <div class="responsive-links">
           <a href="#project-presentation" id="responsive-projects"
-            >MES PROJETS</a
+            >PROJETS</a
           >
         </div>
-        <div class="responsive-links">
-          <a href="#contact" id="responsive-contact">CONTACT</a>
-        </div>
       </nav>
-      <!-- Liens vers réseaux sociaux -->
     </header>
+
     <!-- Job description -->
     <main>
       <section id="page-title">
-        <div id="name">
-          <h1 id="name-delay0">Baptiste</h1>
-          <h1 id="name-delay1">Charier</h1>
+        <div class="section-name">
+        <h1 id="name">Baptiste Charier</h1>
         </div>
-        <address class="social-links">
-          <a
-            href="https://github.com/Bcharier"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><i id="github-link" class="fab fa-github-square"></i
-          ></a>
-          <a
-            href="https://www.linkedin.com/in/baptiste-charier/"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><i id="linkedin-link" class="fab fa-linkedin"></i
-          ></a>
-          <a
-            href="mailto:charier.ba@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><i id="email-link" class="fas fa-envelope"></i
-          ></a>
-        </address>
+        <div class="job-description">
         <h2 id="front-end">Developpeur Front End</h2>
-      </section>
-
-      <section id="job-description">
-        <h2 id="alternance">A la recherche d'une alternance</h2>
+        <h2 id="alternance">A la recherche d'une <span class="alternance">alternance</span></h2>
+      </div>
       </section>
 
       <!-- Description du profil -->
-      <div id="description">
-        <p id="description-text">
-          Passionné de code, curieux et rigoureux, je suis à la recherche d'une
-          entreprise pour m'accompagner dans ma formation en alternance.
-        </p>
-      </div>
-
-      <!-- Flèches pour scroll -->
-      <i id="arrow-scroll-down" class="fas fa-angle-double-down arrow-scroll"></i>
-      <i id="arrow-scroll-up" class="fas fa-angle-double-down arrow-scroll"></i>
-
       <section id="about">
-        <h2 id="about-title">A propos de moi</h2>
+        <h2 id="about-title">A propos</h2>
         <div id="about-description">
           <img src="./images/bc_photo.jpg" alt="photo de Baptiste Charier" />
-          <div id="about-text">
+         <div id="about-text">
+            <p>
+              Passionné de code, curieux et rigoureux, je suis à la recherche d'une
+              entreprise pour m'accompagner dans ma formation en alternance.
+           </p>
             <p>
               Après une première carrière dans la gestion de projets
               internationaux, j'ai trouvé ma vraie passion dans le développement
@@ -119,204 +110,176 @@
               à l'aise en HTML, CSS/SASS, JS et en montée de compétences sur
               React et Tailwind.
             </p>
-            <p></p>
           </div>
         </div>
       </section>
 
       <!-- Présentation des projets -->
-      <section id="project-presentation">
-        <h2 id="project-title">Mes projets</h2>
-        <div class="separation"></div>
+      <section id="project-presentation" class="project-presentation">
+        <h2 class="project-section-title ended-project-title">Projets</h2>
+        <div class="project-container">
         <!-- Reservia -->
         <div class="project">
-          <div class="project-header">
+          <div class="project-overlay">
             <h3>Reservia</h3>
-            <div class="icon-project">
-              <i class="fab fa-html5 icon-langage icon-html"></i>
-              <i class="fab fa-css3-alt icon-langage icon-css"></i>
+            <div class="project-text" id="text-reservia">
+              <p>
+                Site de locations de logements
+              </p>
             </div>
-            <a
-              href="https://github.com/Bcharier/reservia"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><i class="fab fa-github-square project-github-link"></i
-            ></a>
+          <div class="project-icon">
+            <i class="fab fa-html5 icon-langage icon-html"></i>
+            <i class="fab fa-css3-alt icon-langage icon-css"></i>
           </div>
-          <div class="description-project">
+          </div>
+          <div class="project-description">
             <a
               href="https://bcharier.github.io/reservia"
               target="_blank"
               rel="noopener noreferrer"
             >
               <img
+              class="project-img"
                 src="./images/Reservia.png"
                 alt="Image de la page d'accueil du site Réservia"
               />
             </a>
-            <div class="text-project" id="text-reservia">
-              <p>Projet OpenClassrooms</p>
-              <p>
-                Création de la page d'accueil d'un site de locations de
-                logements
-              </p>
-              <ul>
-                <li>Site responsif mobile et tablette</li>
-                <li>Organisation des éléments via Flexbox</li>
-              </ul>
-            </div>
           </div>
         </div>
-        <div class="separation"></div>
+        
 
         <!-- OhMyFood -->
         <div class="project">
-          <div class="project-header">
+          <div class="project-overlay">
             <h3>OhMyFood</h3>
-            <div class="icon-project">
-              <i class="fab fa-html5 icon-langage icon-html"></i>
-              <i class="fab fa-sass icon-langage icon-sass"></i>
+            <div class="project-text" id="text-ohmyfood">
+              <p>
+                Application web pour réserver ses repas en ligne
+              </p>
+    
             </div>
-            <a
-              href="https://github.com/Bcharier/ohmyfood"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><i class="fab fa-github-square project-github-link"></i
-            ></a>
+          <div class="project-icon">
+            <i class="fab fa-html5 icon-langage icon-html"></i>
+            <i class="fab fa-sass icon-langage icon-sass"></i>
           </div>
-          <div class="description-project">
+          </div>
+          <div class="project-description">
             <a
               href="https://bcharier.github.io/ohmyfood"
               target="_blank"
               rel="noopener noreferrer"
             >
               <img
+              class="project-img"
                 src="./images/OhMyFood.png"
                 alt="Image de la page d'accueil du site OhMyFood"
               />
             </a>
-            <div class="text-project" id="text-ohmyfood">
-              <p>Projet OpenClassrooms</p>
-              <p>
-                Création d'une application web pour réserver ses repas en ligne
-              </p>
-              <ul>
-                <li>Site responsif mobile et tablette</li>
-                <li>Animations CSS keyframes</li>
-                <li>Mise en place de SASS</li>
-              </ul>
-            </div>
           </div>
         </div>
-        <div class="separation"></div>
+        
 
         <!-- GameOn -->
         <div class="project">
-          <div class="project-header">
+          <div class="project-overlay">
             <h3>GameOn</h3>
-            <div class="icon-project">
-              <i class="fab fa-html5 icon-langage icon-html"></i>
-              <i class="fab fa-css3-alt icon-langage icon-css"></i>
-              <i class="fab fa-js-square icon-langage icon-js"></i>
+            <div class="project-text" id="text-gameon">
+              <p>
+                Plateforme d'organisation de tournois de jeux-vidéo
+              </p>
             </div>
-            <a
-              href="https://github.com/Bcharier/gameon"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><i class="fab fa-github-square project-github-link"></i
-            ></a>
+          <div class="project-icon">
+            <i class="fab fa-html5 icon-langage icon-html"></i>
+            <i class="fab fa-css3-alt icon-langage icon-css"></i>
+            <i class="fab fa-js-square icon-langage icon-js"></i>
           </div>
-          <div class="description-project">
+          </div>
+          <div class="project-description">
             <a
               href="https://bcharier.github.io/gameon"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="./images/GameOn.png" alt="Image du site GameOn" />
+              <img class="project-img" src="./images/GameOn.png" alt="Image du site GameOn" />
             </a>
-            <div class="text-project" id="text-gameon">
-              <p>Projet OpenClassrooms</p>
-              <p>
-                Réalisation d'un formulaire de contact avec validation des
-                champs pour un site d'organisation de tournois de jeux-vidéo
-              </p>
-              <ul>
-                <li>Site responsif mobile</li>
-                <li>Mise en place d'un formulaire de contact en JavaScript</li>
-                <li>
-                  Validation des champs et affichage de messages d'erreurs
-                </li>
-              </ul>
-            </div>
+
           </div>
         </div>
-        <div class="separation"></div>
+        
 
         <!-- FishEye -->
         <div class="project">
-          <div class="project-header">
+          <div class="project-overlay">
             <h3>Fisheye</h3>
-            <div class="icon-project">
-              <i class="fab fa-html5 icon-langage icon-html"></i>
-              <i class="fab fa-sass icon-langage icon-sass"></i>
-              <i class="fab fa-js-square icon-langage icon-js"></i>
+            <div class="project-text" id="text-fisheye">
+              <p>Plateforme de promotion de photographes</p>
             </div>
-            <a
-              href="https://github.com/Bcharier/fisheye"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><i class="fab fa-github-square project-github-link"></i
-            ></a>
+          <div class="project-icon">
+            <i class="fab fa-html5 icon-langage icon-html"></i>
+            <i class="fab fa-sass icon-langage icon-sass"></i>
+            <i class="fab fa-js-square icon-langage icon-js"></i>
           </div>
-          <div class="description-project">
+          </div>
+          <div class="project-description">
             <a
               href="https://bcharier.github.io/fisheye"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="./images/fisheye.png" alt="Image du site FishEye" />
+              <img  class="project-img" src="./images/fisheye.png" alt="Image du site FishEye" />
+
             </a>
-            <div class="text-project" id="text-fisheye">
-              <p>Projet OpenClassrooms - En cours de réalisation</p>
-              <p>Création d'une plateforme de promotion de photographes</p>
-              <ul>
-                <li>Site responsif mobile</li>
-                <li>
-                  Génération dynamique des informations via des données Json
-                </li>
-                <li>Filtres de recherche pour trier les photographes</li>
-                <li>Lightbox pour visionner photos et vidéos</li>
-              </ul>
-            </div>
+
           </div>
         </div>
-        <div class="separation"></div>
+    </div>
+      </section>
+
+      <!-- Projets en cours de réalisation -->
+      <section class="project-presentation" id="incoming-projects-section">
+        <h2 class="project-section-title incoming-project-title">Projets en cours</h2>
+        <div class="project-container">
+                <!-- Les petits plats -->
+      <div class="project incoming-project">
+        <div class="project-overlay">
+          <h3>Les petits plats</h3>
+          <div class="project-text" id="text-plats">
+            <p>
+              Moteur de recherche de recettes de cuisine
+            </p>
+          </div>
+        <div class="project-icon">
+          <i class="fab fa-html5 icon-langage icon-html"></i>
+          <i class="fab fa-sass icon-langage icon-sass"></i>
+          <i class="fab fa-js-square icon-langage icon-js"></i>
+        </div>
+        </div>
+        <div class="project-description">
+          <p class="test-glitch"><span aria-hidden="true">work in progress</span><span aria-hidden="true">work in progress</span><span>work in progress</span></p>  
+        </div>
+      </div>
+
+      <!-- NBA tracker -->
+        <div class="project incoming-project">
+          <div class="project-overlay">
+            <h3>NBA tracker</h3>
+            <div class="project-text" id="text-nba">
+              <p>Suivi des résultats et stats NBA</p>
+            </div>
+          <div class="project-icon">
+            <i class="fab fa-html5 icon-langage icon-html"></i>
+            <i class="fab fa-sass icon-langage icon-sass"></i>
+            <i class="fab fa-js-square icon-langage icon-js"></i>
+          </div>
+          </div>
+          <div class="project-description">
+            <p class="test-glitch"><span aria-hidden="true">work in progress</span><span aria-hidden="true">work in progress</span><span>work in progress</span></p>            
+
+          </div>
+        </div>
+        </div>
       </section>
     </main>
-    <footer id="contact">
-      <h2 id="contact-title">Contactez moi</h2>
-      <div id="contact-info">
-        <p>
-          <a
-            id="contact-linkedin"
-            href="https://www.linkedin.com/in/baptiste-charier/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Sur LinkedIn
-          </a>
-        </p>
-        <p>
-          <a
-            id="contact-mail"
-            href="mailto:charier.ba@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Par mail</a
-          >
-        </p>
-      </div>
-    </footer>
     <script src="JS/index.js"></script>
   </body>
 </html>

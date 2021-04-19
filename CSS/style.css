@@ -745,7 +745,7 @@ header nav ul li:hover:after {
   }
   .project-presentation .project-container .project:hover .project-overlay {
     opacity: 1;
-    z-index: 1;
+    z-index: 0;
   }
   .project-presentation .project-container .incoming-project:hover .test-glitch {
     opacity: 0;
@@ -756,13 +756,14 @@ header nav ul li:hover:after {
   .project-presentation .project-container .project .project-overlay {
     width: 15rem;
     height: 12rem;
-  }
-  .project-presentation .project-container .project .project-overlay .project-img {
-    display: none;
+    z-index: 0;
   }
   .project-presentation .project-container .project .project-overlay h3 {
     font-size: 1.2rem;
     margin: 0.8em auto 1em auto;
+  }
+  .project-presentation .project-container .project .project-img {
+    width: 15rem;
   }
   .project-presentation .project-container .project .project-icon .icon-langage {
     font-size: 1.5rem;

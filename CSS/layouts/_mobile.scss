@@ -165,7 +165,7 @@
 
       .project:hover .project-overlay {
         opacity: 1;
-        z-index: 1;
+        z-index: 0;
       }
 
       .incoming-project:hover .test-glitch {
@@ -178,14 +178,16 @@
         .project-overlay {
           width: 15rem;
           height: 12rem;
+          z-index: 0;
 
-          .project-img {
-            display: none;
-          }
           h3 {
             font-size: 1.2rem;
             margin: 0.8em auto 1em auto;
           }
+        }
+
+        .project-img {
+          width: 15rem;
         }
 
         .project-icon {

@@ -1,21 +1,6 @@
 @font-face {
-  font-family: "neuropolX";
-  src: url(/font/neuropolX.ttf);
-}
-
-@font-face {
-  font-family: "neuropolitical";
-  src: url(/font/neuropolitical.ttf);
-}
-
-@font-face {
   font-family: "good_times";
   src: url(/font/good_times.ttf);
-}
-
-@font-face {
-  font-family: helvetica;
-  src: url("/font/helvetica-neue-master/HelveticaNeue-Regular.otf");
 }
 
 @font-face {
@@ -279,7 +264,7 @@ header nav ul li:hover:after {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
 }
 
 #about {
@@ -312,7 +297,7 @@ header nav ul li:hover:after {
   margin-right: 1.5em;
 }
 
-#about #about-description #about-text p {
+#about #about-description #about-text {
   white-space: wrap;
   font-size: 1.5em;
   font-weight: 200;
@@ -501,18 +486,13 @@ header nav ul li:hover:after {
       justify-content: space-around;
   position: relative;
   font-size: 1.5rem;
-  width: 30rem;
-  height: 24rem;
+  width: 25rem;
+  height: 20rem;
   z-index: 5;
   -webkit-transition: opacity 300ms;
   transition: opacity 300ms;
   background-color: #292928;
   border-radius: 5%;
-}
-
-.project-presentation .project-container .project .project-overlay .project-github-link {
-  color: #d3d3d3;
-  font-size: 3rem;
 }
 
 .project-presentation .project-container .project .project-overlay h3 {
@@ -535,7 +515,7 @@ header nav ul li:hover:after {
 }
 
 .project-presentation .project-container .project .project-img {
-  width: 30rem;
+  width: 25rem;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: top;
@@ -607,33 +587,57 @@ header nav ul li:hover:after {
     padding: 0;
     margin: 0;
   }
+  header #lang-choice .lang-option {
+    font-size: 1rem;
+    margin: 0 0.2rem;
+  }
+  header .social-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    margin: 0 1rem 0 1rem;
+  }
+  header .social-links i {
+    font-size: 1.6em;
+    margin: 0.3rem;
+  }
   header nav {
-    opacity: 1;
+    display: none;
   }
   header nav ul li {
     display: none;
   }
-  .arrow-scroll {
-    display: none;
-  }
-  .hamburger-menu {
+  header .hamburger-menu {
     display: block;
-    color: #d3d3d3;
+    color: #ffdf2b;
     font-size: 1.5rem;
     margin-right: 1.5rem;
   }
-  #close-icon {
+  header #close-icon {
     display: none;
-    color: #d3d3d3;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    z-index: 50;
+    color: #ffdf2b;
     font-size: 1.5rem;
+    cursor: pointer;
   }
-  #nav-responsive {
+  header #nav-responsive {
     display: none;
+    position: fixed;
+    background-color: #1A1A1A;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    z-index: 5;
+    padding-top: 1rem;
   }
-  #nav-responsive div {
+  header #nav-responsive div {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -646,45 +650,24 @@ header nav ul li:hover:after {
     font-size: 1.5rem;
     margin: 1.5rem auto;
   }
-  #nav-responsive div a {
+  header #nav-responsive div a {
     color: #d3d3d3;
   }
   #page-title {
     margin: 1.5rem 5%;
   }
-  #page-title #name {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin: 1.5rem auto;
-  }
-  #page-title #name h1 {
+  #page-title .section-name {
     font-size: 1.8rem;
-    margin-right: 1rem;
   }
-  #page-title .social-links {
-    margin: 2rem auto;
-  }
-  #page-title i {
-    font-size: 2.2rem;
-    margin: 0 1.5rem;
-  }
-  #page-title #front-end {
+  #page-title .job-description {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    font-size: 1.2rem;
-    margin: 1.5rem auto;
-    width: 100%;
-  }
-  #job-description {
-    font-size: 1.2rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    font-size: 0.8rem;
   }
   #description p {
     font-size: 1.1rem;
@@ -712,15 +695,80 @@ header nav ul li:hover:after {
     -ms-flex-flow: wrap;
         flex-flow: wrap;
   }
-  #about img {
+  #about #about-description img {
     margin: auto;
+    height: 12em;
+    -o-object-position: center;
+       object-position: center;
   }
-  #project-presentation {
+  #about #about-description #about-text {
+    white-space: normal;
+    font-size: 1.1em;
+    margin: 0 auto 0 auto;
+  }
+  .skills h2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 1.8rem;
+    width: auto;
+    margin: 0 auto 3rem auto;
+  }
+  .skills h3 {
+    font-size: 1.4em;
+    margin: 1.5em auto 1.5em auto;
+  }
+  .project-presentation {
     margin: 2% 5% 1.5rem 5%;
   }
-  #project-presentation h2 {
+  .project-presentation h2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     font-size: 1.8rem;
-    margin: 1rem auto;
+    width: auto;
+    margin: 0 auto 3rem auto;
+    text-align: center;
+  }
+  .project-presentation .project-container .project:hover {
+    -webkit-box-shadow: 0.1em 0.3em 0.6em #292928;
+            box-shadow: 0.1em 0.3em 0.6em #292928;
+  }
+  .project-presentation .project-container .project:hover .project-img {
+    opacity: 0;
+  }
+  .project-presentation .project-container .project:hover .project-overlay {
+    opacity: 1;
+    z-index: 1;
+  }
+  .project-presentation .project-container .incoming-project:hover .test-glitch {
+    opacity: 0;
+  }
+  .project-presentation .project-container .project {
+    margin: 5% auto 5% auto;
+  }
+  .project-presentation .project-container .project .project-overlay {
+    width: 15rem;
+    height: 12rem;
+  }
+  .project-presentation .project-container .project .project-overlay .project-img {
+    display: none;
+  }
+  .project-presentation .project-container .project .project-overlay h3 {
+    font-size: 1.2rem;
+    margin: 0.8em auto 1em auto;
+  }
+  .project-presentation .project-container .project .project-icon .icon-langage {
+    font-size: 1.5rem;
+  }
+  .project-presentation .project-container .project .project-text {
+    font-size: 0.7em;
   }
 }
 
@@ -728,6 +776,7 @@ header nav ul li:hover:after {
   body,
   html {
     margin: 0 10%;
+    font-size: 0.7vw;
   }
 }
 /*# sourceMappingURL=style.css.map */

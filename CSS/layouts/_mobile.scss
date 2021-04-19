@@ -9,39 +9,59 @@
     padding: 0;
     margin: 0;
 
+    #lang-choice {
+      .lang-option {
+        font-size: 1rem;
+        margin: 0 0.2rem;
+      }
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      margin: 0 1rem 0 1rem;
+    }
+
+    .social-links i {
+      font-size: 1.6em;
+      margin: 0.3rem;
+    }
+
     nav {
-      opacity: 1;
+      display: none;
       ul {
         li {
           display: none;
         }
       }
     }
-  }
-
-  .arrow-scroll {
-    display: none;
-  }
-
 
   .hamburger-menu {
     display: block;
-    color: $colour-text;
+    color: $colour-primary;
     font-size: 1.5rem;
     margin-right: 1.5rem;
   }
 
   #close-icon {
     display: none;
-    color: $colour-text;
+    justify-content: flex-end;
+    z-index: 50;
+    color: $colour-primary;
     font-size: 1.5rem;
+    cursor: pointer;
   }
 
   #nav-responsive {
     display: none;
+    position: fixed;
+    background-color: $colour-background;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    z-index: 5;
+    padding-top: 1rem;
 
     div {
       display: flex;
@@ -55,40 +75,20 @@
       }
     }
   }
+}
 
   #page-title {
     margin: 1.5rem 5%;
 
-    #name {
+    .section-name {
+      font-size: 1.8rem;
+    }
+
+    .job-description {
       display: flex;
-      justify-content: center;
-      margin: 1.5rem auto;
-      h1 {
-        font-size: 1.8rem;
-        margin-right: 1rem;
-      }
+      flex-flow: column wrap;
+      font-size: 0.8rem;
     }
-
-    .social-links {
-      margin: 2rem auto;
-    }
-
-    i {
-      font-size: 2.2rem;
-      margin: 0 1.5rem;
-    }
-
-    #front-end {
-      display: flex;
-      justify-content: center;
-      font-size: 1.2rem;
-      margin: 1.5rem auto;
-      width: 100%;
-    }
-  }
-
-  #job-description {
-    font-size: 1.2rem;
   }
 
   #description {
@@ -113,19 +113,90 @@
       font-size: 1.1rem;
       display: flex;
       flex-flow: wrap;
-    }
 
-    img {
-      margin: auto;
+      img {
+        margin: auto;
+        height: 12em;
+        object-position: center;
+      }
+
+      #about-text {
+        white-space: normal;
+        font-size: 1.1em;
+        margin: 0 auto 0 auto;
+      }
     }
   }
 
-  #project-presentation {
+  .skills {
+    h2 {
+      display: flex;
+      justify-content: center;
+      font-size: 1.8rem;
+      width: auto;
+      margin: 0 auto 3rem auto;
+    }
+
+    h3 {
+      font-size: 1.4em;
+      margin: 1.5em auto 1.5em auto;
+    }
+  }
+
+  .project-presentation {
     margin: 2% 5% 1.5rem 5%;
 
     h2 {
+      display: flex;
+      justify-content: center;
       font-size: 1.8rem;
-      margin: 1rem auto;
+      width: auto;
+      margin: 0 auto 3rem auto;
+      text-align: center;
+    }
+
+    .project-container {
+      .project:hover {
+        box-shadow: 0.1em 0.3em 0.6em $colour-project-background;
+      }
+      .project:hover .project-img {
+        opacity: 0;
+      }
+
+      .project:hover .project-overlay {
+        opacity: 1;
+        z-index: 1;
+      }
+
+      .incoming-project:hover .test-glitch {
+        opacity: 0;
+      }
+
+      .project {
+        margin: 5% auto 5% auto;
+
+        .project-overlay {
+          width: 15rem;
+          height: 12rem;
+
+          .project-img {
+            display: none;
+          }
+          h3 {
+            font-size: 1.2rem;
+            margin: 0.8em auto 1em auto;
+          }
+        }
+
+        .project-icon {
+          .icon-langage {
+            font-size: 1.5rem;
+          }
+        }
+        .project-text {
+          font-size: 0.7em;
+        }
+      }
     }
   }
 }

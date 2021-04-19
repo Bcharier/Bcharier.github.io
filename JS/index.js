@@ -187,7 +187,7 @@ function responsiveNav() {
 
   else {
     navResponsive.style.display = "inline-block";
-    closeIcon.style.display = "inline-block";
+    closeIcon.style.display = "flex";
     hamburgerIcon.style.display = "none";
     responsiveLinks.forEach((div) => div.addEventListener("click", closeResponsiveNav));
   }

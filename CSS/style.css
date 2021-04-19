@@ -555,8 +555,8 @@ header nav ul li:hover:after {
 
 .test-glitch span {
   position: absolute;
-  top: 7em;
-  left: 6.5em;
+  top: 5em;
+  left: 5em;
 }
 
 .test-glitch span:first-child {

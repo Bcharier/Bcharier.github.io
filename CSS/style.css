@@ -136,13 +136,11 @@ header {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  margin: auto;
   background-color: #1A1A1A;
   z-index: 3;
   height: 5rem;
   margin: 0;
   font-family: "good_times";
-  width: 100%;
 }
 
 header #lang-choice {
@@ -179,10 +177,6 @@ header .social-links i {
   color: #d3d3d3;
   font-size: 1.8em;
   margin: 1rem;
-  -webkit-transition: -webkit-transform 300ms;
-  transition: -webkit-transform 300ms;
-  transition: transform 300ms;
-  transition: transform 300ms, -webkit-transform 300ms;
 }
 
 header .social-links i:hover {
@@ -534,7 +528,6 @@ header nav ul li:hover:after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
 }
 
 .project-presentation .project-container .project .project-icon .icon-langage {

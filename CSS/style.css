@@ -375,6 +375,10 @@ header nav ul li:hover:after {
   color: #CD6799;
 }
 
+.skills div .icon-boot {
+  color: #563d7c;
+}
+
 .skills div .icon-js {
   color: #f0db4f;
 }

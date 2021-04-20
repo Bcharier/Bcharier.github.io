@@ -592,17 +592,11 @@ header nav ul li:hover:after {
     margin: 0 0.2rem;
   }
   header .social-links {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     text-align: center;
-    margin: 0 1rem 0 1rem;
+    margin: 0 0.5rem 0 0.5rem;
   }
   header .social-links i {
-    font-size: 1.6em;
+    font-size: 2.2em;
     margin: 0.3rem;
   }
   header nav {
@@ -614,7 +608,7 @@ header nav ul li:hover:after {
   header .hamburger-menu {
     display: block;
     color: #ffdf2b;
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-right: 1.5rem;
   }
   header #close-icon {

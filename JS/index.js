@@ -9,7 +9,6 @@ const buttonFr = document.getElementById("button-fr");
 const buttonEn = document.getElementById("button-en");
 const nav = document.querySelector("nav");
 const frontEnd = document.getElementById("front-end");
-const alternance = document.getElementById("alternance");
 const navAbout = document.getElementById("nav-about");
 const navProjects = document.getElementById("nav-projects");
 const header = document.querySelector("header");
@@ -31,6 +30,7 @@ const textGameon = document.getElementById("text-gameon");
 const textFisheye = document.getElementById("text-fisheye");
 const textPlats = document.querySelector("#text-plats");
 const textNba = document.querySelector("#text-nba");
+const textCuistot = document.querySelector("#text-cuistot")
 const incomingProjects = document.getElementById("incoming-projects-section");
 const incomingProjectsTitle = document.querySelector(".incoming-project-title");
 const skillsSection = document.querySelector(".skills");
@@ -50,8 +50,6 @@ buttonEn.addEventListener("click", langSwitchEn);
 function langSwitchEn() {
   frontEnd.innerHTML = "Front End Developper";
   frontEnd.classList.add("lang-switch");
-  alternance.innerHTML = "Looking for an apprenticeship";
-  alternance.classList.add("lang-switch");
   navAbout.innerHTML = "ABOUT";
   navProjects.innerHTML = "PROJECTS";
   navProjects.classList.add("lang-switch");
@@ -65,9 +63,9 @@ function langSwitchEn() {
   aboutTitle.innerHTML = `About me`;
   aboutTitle.classList.add("lang-switch");
   aboutText.innerHTML = ` 
-  <p>Passionnate about coding, curious and rigorous, I am looking for a company willing to accompany my development through an apprenticeship.</p>
+  <p>Passionnate about coding, curious and rigorous, I am available to develop your web projects.</p>
   <p>After a first career in international project management, I found my true passion in web development and I am currently switching career to become a full time front end developper</p>
-  <p>I am following a front end developper cursus with OpenClassrooms, I am comfortable with HTML, CSS/SASS, JS and training to be proficient with React and Tailwind</p>`;
+  <p>After a first OpenClassrooms front end development cursus, I became an independant web developper. I am comfortable with HTML, CSS/SCSS, Bootstrap and Javascript for web integration and front end development. I am also available for the integration of your website on the CMS of your choice.</p>`;
   aboutText.classList.add("lang-switch");
   projectTitle.innerHTML = `Projects`;
   projectTitle.classList.add("lang-switch");
@@ -95,14 +93,14 @@ function langSwitchEn() {
   positivity.classList.add("lang-switch");
   skillsTitle.innerHTML = "Skills";
   skillsTitle.classList.add("lang-switch");
+  textCuistot.innerHTML = "Website for Papa Cuistot, Afro-caribbean caterer"
+  textCuistot.classList.add("lang-switch");
   setTimeout(clearClass, 1500);
 }
 
 function langSwitchFr() {
   frontEnd.innerHTML = "Développeur Front End";
   frontEnd.classList.add("lang-switch");
-  alternance.innerHTML = "A la recherche d'une alternance";
-  alternance.classList.add("lang-switch");
   navAbout.innerHTML = "A PROPOS";
   navAbout.classList.add("lang-switch");
   navProjects.innerHTML = "PROJETS";
@@ -116,10 +114,11 @@ function langSwitchFr() {
   aboutTitle.innerHTML = `A propos`;
   aboutTitle.classList.add("lang-switch");
   aboutText.innerHTML = ` 
-  <p>Passionné de code, curieux et rigoureux, je suis à la recherche d'une
-  entreprise pour m'accompagner dans ma formation en alternance.</p>
-  <p>Après une première carrière dans la gestion de projet internationaux, j'ai trouvé ma vraie passion dans le développement et suis en cours de reconversion professionnelle.</p>
-  <p>En formation de développeur Front End chez OpenClassrooms, je suis à l'aise en HTML, CSS/SASS, JS et en montée de compétences sur React et Tailwind.</p>`;
+  <p>Passionné de code, curieux et rigoureux, je suis disponible pour la réalisation de vos projets web.</p>
+  <p>Après une première carrière dans la gestion de projets
+  internationaux, j'ai trouvé ma vraie passion dans le développement web
+  et suis en cours de reconversion professionnelle.</p>
+  <p>   Après une première formation de développeur front end chez OpenClassrooms, je me suis lancé en indépendant. Je maîtrise HTML, CSS/SCSS, Bootstrap et Javascript pour de l'intégration web et la programmation front end. Je suis également disponible pour intégrer vos sites sur le CMS de votre choix.</p>`;
   aboutText.classList.add("lang-switch");
   projectTitle.innerHTML = `Mes Projets`;
   projectTitle.classList.add("lang-switch");
@@ -147,12 +146,13 @@ function langSwitchFr() {
   positivity.classList.add("lang-switch");
   skillsTitle.innerHTML = "Compétences";
   skillsTitle.classList.add("lang-switch");
+  textCuistot.innerHTML = "Site vitrine pour Papa Cuistot, traiteur afro-antillais"
+  textCuistot.classList.add("lang-switch");
   setTimeout(clearClass, 1500)
 }
 
 function clearClass() {
   frontEnd.classList.remove("lang-switch");
-  alternance.classList.remove("lang-switch");
   navProjects.classList.remove("lang-switch");
   navAbout.classList.remove("lang-switch");
   responsiveHome.classList.remove("lang-switch");
@@ -172,6 +172,7 @@ function clearClass() {
   learner.classList.remove("lang-switch");
   positivity.classList.remove("lang-switch");
   skillsTitle.classList.remove("lang-switch");
+  textCuistot.classList.remove("lang-switch");
 }
 
 /* 

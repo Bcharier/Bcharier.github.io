@@ -1,202 +1,203 @@
 @media only screen and (max-width: 900px) {
-  html,
-  body {
-    margin: 0;
-    padding: 0;
-  }
+	html,
+	body {
+		margin: 0;
+		padding: 0;
+	}
 
-  header {
-    padding: 0;
-    margin: 0;
+	header {
+		padding: 0;
+		margin: 0;
 
-    #lang-choice {
-      .lang-option {
-        font-size: 1rem;
-        margin: 0 0.2rem;
-      }
-    }
+		#lang-choice {
+			.lang-option {
+				font-size: 1rem;
+				margin: 0 0.2rem;
+			}
+		}
 
-    .social-links {
-      text-align: center;
-      margin: 0 0.5rem 0 0.5rem;
-    }
+		.social-links {
+			text-align: center;
+			margin: 0 0.5rem 0 0.5rem;
+		}
 
-    .social-links i {
-      font-size: 2.2em;
-      margin: 0.3rem;
-    }
+		.social-links i {
+			font-size: 2.2em;
+			margin: 0.3rem;
+		}
 
-    nav {
-      display: none;
-      ul {
-        li {
-          display: none;
-        }
-      }
-    }
+		nav {
+			display: none;
+			ul {
+				li {
+					display: none;
+				}
+			}
+		}
 
-  .hamburger-menu {
-    display: block;
-    color: $colour-primary;
-    font-size: 2rem;
-    margin-right: 1.5rem;
-  }
+		.hamburger-menu {
+			display: block;
+			color: $colour-primary;
+			font-size: 2rem;
+			margin-right: 1.5rem;
+		}
 
-  #close-icon {
-    display: none;
-    justify-content: flex-end;
-    z-index: 50;
-    color: $colour-primary;
-    font-size: 1.5rem;
-    cursor: pointer;
-  }
+		#close-icon {
+			display: none;
+			justify-content: flex-end;
+			z-index: 50;
+			color: $colour-primary;
+			font-size: 1.5rem;
+			cursor: pointer;
+		}
 
-  #nav-responsive {
-    display: none;
-    position: fixed;
-    background-color: $colour-background;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding-top: 1rem;
+		#nav-responsive {
+			display: none;
+			position: fixed;
+			background-color: $colour-background;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			padding-top: 1rem;
 
-    div {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 1.5rem;
-      margin: 1.5rem auto;
+			div {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 1.5rem;
+				margin: 1.5rem auto;
 
-      a {
-        color: $colour-text;
-      }
-    }
-  }
-}
+				a {
+					color: $colour-text;
+				}
+			}
+		}
+	}
 
-  #page-title {
-    margin: 1.5rem 5%;
+	#page-title {
+		margin: 1.5rem 5%;
 
-    .section-name {
-      font-size: 1.8rem;
-    }
+		.section-name {
+			font-size: 1.8rem;
+		}
 
-    .job-description {
-      display: flex;
-      flex-flow: column wrap;
-      font-size: 0.8rem;
-    }
-  }
+		.job-description {
+			display: flex;
+			flex-flow: column wrap;
+			font-size: 0.8rem;
+		}
+	}
 
-  #description {
-    p {
-      font-size: 1.1rem;
-      padding: 0;
-    }
-  }
+	#description {
+		p {
+			font-size: 1.1rem;
+			padding: 0;
+		}
+	}
 
-  #about {
-    margin: 5% 5%;
+	#about {
+		margin: 5% 5%;
 
-    #about-title {
-      display: flex;
-      justify-content: center;
-      font-size: 1.8rem;
-      width: auto;
-      margin: 0 auto 3rem auto;
-    }
+		#about-title {
+			display: flex;
+			justify-content: center;
+			font-size: 1.8rem;
+			width: auto;
+			margin: 0 auto 3rem auto;
+		}
 
-    #about-description {
-      font-size: 1.1rem;
-      display: flex;
-      flex-flow: wrap;
+		#about-description {
+			font-size: 1.1rem;
+			display: flex;
+			flex-flow: wrap;
 
-      img {
-        margin: auto;
-        height: 12em;
-        object-position: center;
-      }
+			img {
+				margin: auto;
+				height: 15em;
+				object-position: center;
+				position: static;
+			}
 
-      #about-text {
-        white-space: normal;
-        font-size: 1.1em;
-        margin: 0 auto 0 auto;
-      }
-    }
-  }
+			#about-text {
+				white-space: normal;
+				font-size: 1.1em;
+				margin: 0 auto 0 auto;
+			}
+		}
+	}
 
-  .skills {
-    h2 {
-      display: flex;
-      justify-content: center;
-      font-size: 1.8rem;
-      width: auto;
-      margin: 0 auto 3rem auto;
-    }
+	.skills {
+		h2 {
+			display: flex;
+			justify-content: center;
+			font-size: 1.8rem;
+			width: auto;
+			margin: 0 auto 3rem auto;
+		}
 
-    h3 {
-      font-size: 1.4em;
-      margin: 1.5em auto 1.5em auto;
-    }
-  }
+		h3 {
+			font-size: 1.4em;
+			margin: 1.5em auto 1.5em auto;
+		}
+	}
 
-  .project-presentation {
-    margin: 2% 5% 1.5rem 5%;
+	.project-presentation {
+		margin: 2% 5% 1.5rem 5%;
 
-    h2 {
-      display: flex;
-      justify-content: center;
-      font-size: 1.8rem;
-      width: auto;
-      margin: 0 auto 3rem auto;
-      text-align: center;
-    }
+		h2 {
+			display: flex;
+			justify-content: center;
+			font-size: 1.8rem;
+			width: auto;
+			margin: 0 auto 3rem auto;
+			text-align: center;
+		}
 
-    .project-container {
-      .project:hover {
-        box-shadow: 0.1em 0.3em 0.6em $colour-project-background;
-      }
-      .project:hover .project-img {
-        opacity: 0;
-      }
+		.project-container {
+			.project:hover {
+				box-shadow: 0.1em 0.3em 0.6em $colour-project-background;
+			}
+			.project:hover .project-img {
+				opacity: 0;
+			}
 
-      .project:hover .project-overlay {
-        opacity: 1;
-        z-index: 0;
-      }
+			.project:hover .project-overlay {
+				opacity: 1;
+				z-index: 0;
+			}
 
-      .incoming-project:hover .test-glitch {
-        opacity: 0;
-      }
+			.incoming-project:hover .test-glitch {
+				opacity: 0;
+			}
 
-      .project {
-        margin: 5% auto 5% auto;
+			.project {
+				margin: 5% auto 5% auto;
 
-        .project-overlay {
-          width: 15rem;
-          height: 12rem;
-          z-index: 0;
+				.project-overlay {
+					width: 15rem;
+					height: 12rem;
+					z-index: 0;
 
-          h3 {
-            font-size: 1.2rem;
-            margin: 0.8em auto 1em auto;
-          }
-        }
+					h3 {
+						font-size: 1.2rem;
+						margin: 0.8em auto 1em auto;
+					}
+				}
 
-        .project-img {
-          width: 15rem;
-        }
+				.project-img {
+					width: 15rem;
+				}
 
-        .project-icon {
-          .icon-langage {
-            font-size: 1.5rem;
-          }
-        }
-        .project-text {
-          font-size: 0.7em;
-        }
-      }
-    }
-  }
+				.project-icon {
+					.icon-langage {
+						font-size: 1.5rem;
+					}
+				}
+				.project-text {
+					font-size: 0.7em;
+				}
+			}
+		}
+	}
 }

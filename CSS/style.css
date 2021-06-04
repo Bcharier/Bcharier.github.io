@@ -105,7 +105,7 @@
 html,
 body {
   background-color: #1A1A1A;
-  font-family: "raleway";
+  font-family: 'raleway';
   scroll-behavior: smooth;
   margin: 0;
   color: #d3d3d3;
@@ -140,7 +140,7 @@ header {
   z-index: 3;
   height: 5rem;
   margin: 0;
-  font-family: "good_times";
+  font-family: 'good_times';
 }
 
 header #lang-choice {
@@ -160,7 +160,7 @@ header #lang-choice .lang-option {
 }
 
 header #lang-choice .lang-option:after {
-  content: "";
+  content: '';
   display: block;
   width: 0;
   height: 0.1em;
@@ -203,7 +203,7 @@ header nav ul li {
 }
 
 header nav ul li:after {
-  content: "";
+  content: '';
   display: block;
   width: 0;
   height: 0.1em;
@@ -231,34 +231,30 @@ header nav ul li:hover:after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
   margin: 5rem 5%;
-  font-family: "good_times";
+  font-family: 'good_times';
 }
 
 #page-title .section-name {
-  margin: 0;
+  margin: 0 auto;
   font-size: 3rem;
   opacity: 1;
   width: 100%;
   color: #ffdf2b;
+  text-align: center;
 }
 
 #page-title .job-description {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   width: 100%;
   font-size: 0.9rem;
+  text-align: center;
 }
 
 #about {
@@ -270,7 +266,7 @@ header nav ul li:hover:after {
 #about #about-title {
   font-size: 3rem;
   margin-bottom: 6rem;
-  font-family: "good_times";
+  font-family: 'good_times';
   border-bottom: solid #ffdf2b 0.2rem;
 }
 
@@ -289,14 +285,14 @@ header nav ul li:hover:after {
   -o-object-position: bottom;
      object-position: bottom;
   margin-right: 1.5em;
+  position: relative;
+  top: 2rem;
 }
 
 #about #about-description #about-text {
-  white-space: wrap;
   font-size: 1.5em;
   font-weight: 200;
   text-align: justify;
-  white-space: wrap;
   margin: 0 5% 1em 5%;
 }
 
@@ -321,12 +317,12 @@ header nav ul li:hover:after {
   width: 100%;
   margin: 0 0 5rem 0;
   font-size: 3rem;
-  font-family: "good_times";
+  font-family: 'good_times';
   border-bottom: solid #ffdf2b 0.2rem;
 }
 
 .skills h3 {
-  font-family: "good_times";
+  font-family: 'good_times';
   font-size: 1.5rem;
   width: 100%;
   text-align: center;
@@ -366,7 +362,7 @@ header nav ul li:hover:after {
 }
 
 .skills div .icon-sass {
-  color: #CD6799;
+  color: #cd6799;
 }
 
 .skills div .icon-boot {
@@ -378,7 +374,7 @@ header nav ul li:hover:after {
 }
 
 .skills div .icon-react {
-  color: #61DBFB;
+  color: #61dbfb;
 }
 
 .skills div .icon-git {
@@ -417,7 +413,7 @@ header nav ul li:hover:after {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
-  font-family: "good_times";
+  font-family: 'good_times';
   border-bottom: solid #ffdf2b 0.2rem;
 }
 
@@ -495,7 +491,7 @@ header nav ul li:hover:after {
 
 .project-presentation .project-container .project .project-overlay h3 {
   font-size: 1.6rem;
-  font-family: "good_times";
+  font-family: 'good_times';
   color: #ffdf2b;
 }
 
@@ -543,7 +539,7 @@ header nav ul li:hover:after {
 }
 
 .test-glitch {
-  font-family: "good_times";
+  font-family: 'good_times';
   text-align: center;
   font-size: 1.5rem;
   opacity: 0;
@@ -688,9 +684,10 @@ header nav ul li:hover:after {
   }
   #about #about-description img {
     margin: auto;
-    height: 12em;
+    height: 15em;
     -o-object-position: center;
        object-position: center;
+    position: static;
   }
   #about #about-description #about-text {
     white-space: normal;
